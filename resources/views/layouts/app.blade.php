@@ -77,6 +77,7 @@
         </nav> --}}
 
         <main class="wrapper">
+            @yield('header')
             @yield('content')
         </main>
     {{-- </div> --}}
