@@ -1,5 +1,5 @@
 @extends('layouts.app')
-{{-- @include('layouts.header') --}}
+@include('layouts.header')
 @section('content')
 
     <div id="home">

@@ -21,7 +21,7 @@
     <script src="{{ mix('/js/app.js') }}"></script>
 </head>
 <body>
-    <div id="app">
+    {{-- <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -74,11 +74,11 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 
         <main class="wrapper">
             @yield('content')
         </main>
-    </div>
+    {{-- </div> --}}
 </body>
 </html>
