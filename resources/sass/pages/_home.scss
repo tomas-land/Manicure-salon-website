@@ -12,10 +12,10 @@
             width: 100%;
             height: 80vh;
 
-            @include responsive_384-767 {
-                // background-size: 188%;
-                width: 100vw;
-                height: 100vw;
+            // @include responsive_384-767 {
+            //     // background-size: 188%;
+            //     width: 100vw;
+            //     height: 100vw;
             }
 
             svg {
@@ -26,16 +26,16 @@
                 left: 0;
                 bottom: 0px;
 
-                @include responsive_384-767 {
-                    transform: translateY(-2rem);
-                }
+                // @include responsive_384-767 {
+                //     transform: translateY(-2rem);
+                // }
             }
 
 
             .background_transp {
                 width: 100%;
                 height: 100%;
-                background-color: $color1;
+                background-color: red;
                 opacity: 0.4;
             }
 
@@ -48,11 +48,11 @@
                 top: 0rem;
                 bottom: 8rem;
 
-                @include responsive_384-767 {
-                    width: 50vw;
-                }
+                // @include responsive_384-767 {
+                //     width: 50vw;
+                // }
             }
         }
 
     }
-}
+
