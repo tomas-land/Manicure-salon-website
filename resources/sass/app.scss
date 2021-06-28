@@ -6,12 +6,38 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=MuseoModerno:wght@100;300;400;500;600;700;800;900&family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&display=swap');// Variables
 
 
-
+// LAYOUT
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 // PAGES
 @import 'pages/_home.scss';
+
+* {
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+body {
+	
+	// background-image: url("/images/500_F_184828173_Rwp6o2NmmPLID6eFSPMmIFZeBqD2XTCo.jpg");
+	// background-size: 50%;
+	// background-position: 45deg;
+	// background-repeat: repeat;
+	
+	// .wrapper{
+	background-color: $color1;
+	
+	}
