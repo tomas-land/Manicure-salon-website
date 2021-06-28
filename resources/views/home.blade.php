@@ -56,7 +56,7 @@
 
 
                 <div class="mokymai_content">
-                    <h1>Manikiūro kursai</h1>
+                    <div class="title">Manikiūro kursai</div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi mollitia nesciunt molestias
                         accusantium magni ut loremdistinctio amet doloremque sit vero, ipsa facere possimus vel fugiat assumenda
                         dolores maiores aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur iste dolor sint recusandae ipsa vitae porro quia fugiat, quaerat nihil deserunt harum magni impedit mollitia maiores, corporis blanditiis voluptates illum. Libero maiores incidunt quasi animi ab ducimus repellat iusto porro
