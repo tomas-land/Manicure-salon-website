@@ -1,8 +1,14 @@
+// UTILITIES
+@import 'utilities/_normalize.scss';
+@import 'utilities/_variables.scss';
+@import 'utilities/_mixins.scss';
+@import 'utilities/_variables';
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
+
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
