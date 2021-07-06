@@ -12,6 +12,8 @@
     "devDependencies": {
         "axios": "^0.21",
         "bootstrap": "^4.6.0",
+        "browser-sync": "^2.27.4",
+        "browser-sync-webpack-plugin": "^2.3.0",
         "jquery": "^3.6",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
@@ -23,5 +25,9 @@
         "vue": "^2.6.12",
         "vue-loader": "^15.9.7",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "flickity": "^2.2.2",
+        "slick-carousel": "^1.8.1"
     }
 }

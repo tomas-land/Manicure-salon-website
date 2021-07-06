@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,12 +15,26 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    {{-- <link href="{{ asset('/glider/glider.css') }}" rel="stylesheet"> --}}
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+   
+    <link href="{{ asset('/slick/slick-theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('/slick/slick.scss') }}" rel="stylesheet">
+
+    {{-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> --}}
+
     <script src="{{ mix('/js/app.js') }}"></script>
+
+
+
+
 </head>
+
 <body>
     {{-- <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -76,10 +91,44 @@
             </div>
         </nav> --}}
 
-        <main class="wrapper">
-            @yield('header')
-            @yield('content')
-        </main>
-    {{-- </div> --}}
+    <main class="wrapper">
+        @yield('header')
+        @yield('content')
+    </main>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $('.slider').slick({
+            
+            arrows: true,
+            centerMode: true,
+            centerPadding: '140px',
+            slidesToShow: 3,
+            responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true,
+                        centerMode: true,
+                        centerPadding: '0px',
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
 </body>
+
 </html>

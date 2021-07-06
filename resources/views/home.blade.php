@@ -45,37 +45,33 @@
         <section id="mokymai_home">
 
 
-            <video muted autoplay loop>
+            {{-- <video muted autoplay loop>
                 <source src="video/1.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 Your browser does not support tthe video tag.
-            </video>
+            </video> --}}
 
 
             <div class="video-overlay">
-
-
                 <div class="mokymai_content">
                     <div class="title">Manikiūro kursai</div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi mollitia nesciunt molestias
-                        accusantium magni ut loremdistinctio amet doloremque sit vero, ipsa facere possimus vel fugiat assumenda
-                        dolores maiores aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur iste dolor sint recusandae ipsa vitae porro quia fugiat, quaerat nihil deserunt harum magni impedit mollitia maiores, corporis blanditiis voluptates illum. Libero maiores incidunt quasi animi ab ducimus repellat iusto porro
+                        accusantium magni ut loremdistinctio amet doloremque sit vero, ipsa facere possimus vel fugiat
+                        assumenda
+                        dolores maiores aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur iste
+                        dolor sint recusandae ipsa vitae porro quia fugiat, quaerat nihil deserunt harum magni impedit
+                        mollitia maiores, corporis blanditiis voluptates illum. Libero maiores incidunt quasi animi ab
+                        ducimus repellat iusto porro
                         repellendus!</p>
                     <a class="btn-grad" href="www.google.lt">Registruotis</a>
                 </div>
 
             </div>
-
-
-
-
-
-
         </section>
 
 
         <section id="paslaugos_home">
-            <svg class="svg-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <svg class="wave_top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#6D316D" fill-opacity="1"
                     d="M0,128L80,138.7C160,149,320,171,480,160C640,149,800,107,960,96C1120,85,1280,107,1360,117.3L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
                 </path>
@@ -113,7 +109,38 @@
                     </div>
                 </a>
             </div>
+
         </section>
+
+        <section id="galerija_home">
+            <div class="container">
+                <div class="title">Naujausi darbai </div>
+                <div class="overlay">
+
+
+
+                </div>
+
+                <div class="slider">
+
+
+                    <div><img src="images/20171006_122628.jpg" alt="" /></div>
+                    <div><img src="images/20171020_220713.jpg" alt="" /></div>
+                    <div><img src="images/20171024_183330.jpg" alt="" /></div>
+                    <div><img src="images/20171205_194334.jpg" alt="" /></div>
+                    <div><img src="images/20180129_162742.jpg" alt="" /></div>
+                    <div><img src="images/20180223_132054.jpg" alt="" /></div>
+                    {{-- <button aria-label="Previous" class="glider-prev">«</button>
+                    <button aria-label="Next" class="glider-next">»</button> --}}
+                    
+                </div>
+            </div>
+
+        </section>
+
+
+
+
     </div>
 
 
