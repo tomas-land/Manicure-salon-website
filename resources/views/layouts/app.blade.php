@@ -24,8 +24,10 @@
 <!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> --}}
 
-    <link href="/slick/slick-theme.css" rel="stylesheet">
-    <link href="/slick/slick.css" rel="stylesheet">
+    {{-- <link href="/slick/slick-theme.css" rel="stylesheet">
+    <link href="/slick/slick.css" rel="stylesheet"> --}}
+    <script src="{{ asset('/slick/slick.css') }}" defer></script>
+    <script src="{{ asset('/slick/slick-theme.css') }}" defer></script>
 
     {{-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <!-- Add the slick-theme.css if you want default styling -->
