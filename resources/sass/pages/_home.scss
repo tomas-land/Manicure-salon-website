@@ -370,3 +370,14 @@
     }
 
 }
+
+.slick-prev:before{
+    font-size: 300px!important;
+    position: absolute!important;
+    z-index: 999999999!important;
+    color: darkgoldenrod!important;
+    top: 0!important;
+    bottom: 0!important;
+    margin: auto!important;
+    left: -30px!important;
+}
