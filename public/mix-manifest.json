@@ -1,14 +1,4 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/slick/ajax-loader.gif": "/slick/ajax-loader.gif",
-    "/slick/config.rb": "/slick/config.rb",
-    "/slick/slick-theme.css": "/slick/slick-theme.css",
-    "/slick/slick-theme.less": "/slick/slick-theme.less",
-    "/slick/slick-theme.scss": "/slick/slick-theme.scss",
-    "/slick/slick.css": "/slick/slick.css",
-    "/slick/slick.js": "/slick/slick.js",
-    "/slick/slick.less": "/slick/slick.less",
-    "/slick/slick.min.js": "/slick/slick.min.js",
-    "/slick/slick.scss": "/slick/slick.scss"
+    "/js/app.js": "/js/app.js?id=d8f7d02ceba1ef8eca87",
+    "/css/app.css": "/css/app.css?id=e9f6bd5cc8fcc5c50aac"
 }
