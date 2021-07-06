@@ -17,15 +17,15 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    {{-- <link href="{{ asset('/glider/glider.css') }}" rel="stylesheet"> --}}
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-   
    <!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+{{-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> --}}
 
+    <link href="{{ secure_asset('/slick/slick-theme.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('/slick/slick.scss') }}" rel="stylesheet">
 
     {{-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <!-- Add the slick-theme.css if you want default styling -->
