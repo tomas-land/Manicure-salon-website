@@ -13,12 +13,13 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .vue()
-    .sass('resources/sass/app.scss', 'public/css');
-    
+    .sass('resources/sass/app.scss', 'public/css')
+    .copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts')
     if (mix.inProduction()) {
         mix.version();
     }
 
+ 
     // mix.browserSync({
     //     proxy: 'http://127.0.0.1:8000'
     // });

@@ -99,6 +99,10 @@
         @yield('content')
     </main>
 
+    @yield('footer')
+
+
+
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -109,19 +113,19 @@
             
             arrows: true,
             centerMode: true,
-            centerPadding: '140px',
+            centerPadding: '30px',
             slidesToShow: 3,
             responsive: [{
-                    breakpoint: 768,
+                    breakpoint: 908,
                     settings: {
                         arrows: true,
                         centerMode: true,
                         centerPadding: '0px',
-                        slidesToShow: 1
+                        slidesToShow: 2
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 760,
                     settings: {
                         arrows: false,
                         centerMode: true,

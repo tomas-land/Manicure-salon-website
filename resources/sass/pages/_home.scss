@@ -12,7 +12,9 @@
             width: 100%;
             height: 80vh;
 
-            @include responsive_384-767 {
+            @include responsive_1200 {}
+
+            @include responsive_700 {
                 // background-size: 188%;
                 width: 100vw;
                 height: 100vw;
@@ -41,7 +43,7 @@
                 width: 100%;
                 height: 100%;
                 background-color: $color1;
-                opacity: 0.4;
+                opacity: 0.5;
             }
 
             .vb_logo {
@@ -70,7 +72,7 @@
             transform: translateY(-2rem);
 
             .container {
-                max-width: 1100px;
+                max-width: 80%;
                 display: flex;
                 justify-content: center;
                 margin: auto;
@@ -144,10 +146,15 @@
 
             .mokymai_content {
                 // margin: 6rem 4rem;
-                width: 40%;
+                width: 50%;
                 display: flex;
                 flex-direction: column;
-                padding-top: 4rem;
+                padding-top: 5rem;
+
+                @include responsive_1200 {
+                    padding-top: 1rem;
+                    width: 55%;
+                }
 
                 @include responsive_384-767 {
 
@@ -157,10 +164,13 @@
                 .title {
                     margin-bottom: 2rem;
 
+                    text-align: start;
                     font-family: $montserrat;
                     font-weight: 100;
                     color: $color-washed-violet;
                     font-size: 6vw;
+
+                    @include responsive_1200 {}
 
                     @include responsive_384-767 {
                         font-size: 10vw;
@@ -171,7 +181,7 @@
                 p {
                     text-indent: 2rem;
                     text-align: justify;
-                    width: 80%;
+                    width: 70%;
                     margin: 0 auto;
                     font-family: $montserrat;
                     font-weight: 200;
@@ -179,7 +189,17 @@
                     font-size: 2vh;
                     overflow: hidden;
 
-                    @include responsive_384-767 {}
+                    @include responsive_1200 {
+                        font-size: 1.5vh;
+                    }
+
+                    @include responsive_960 {
+                        width: 80%;
+                    }
+
+                    @include responsive_384-767 {
+                        font-size: 2.2vh;
+                    }
                 }
 
                 .btn-grad {
@@ -187,7 +207,7 @@
                     font-family: "Montserrat", sans-serif;
                     font-size: 1.4vh;
                     width: 50%;
-                    margin: 3rem auto;
+                    margin: 4rem auto 0;
                     padding: 15px 45px;
                     text-align: center;
                     text-transform: uppercase;
@@ -195,6 +215,17 @@
                     background-size: 200% auto;
                     color: white;
                     text-decoration: none;
+
+                    @include responsive_1200 {
+                        font-size: 1.5vh;
+                    }
+
+                    @include responsive_960 {
+                        margin-top: 1rem;
+                        width: 40%;
+                        padding: 12px 40px;
+
+                    }
 
                     @include responsive_384-767 {
                         font-size: 3vw;
@@ -227,8 +258,8 @@
         .wave_top {
 
             background-color: transparent;
-
-            // transform: translateY(131%);
+            transform: translateY(7px);
+           
         }
 
         .container {
@@ -238,16 +269,15 @@
             padding-bottom: 3rem;
 
             .title {
-                margin-left: 100px;
+                width: 70%;
+                margin: auto;
                 font-family: $montserrat;
-                font-size: 8vw;
+                font-size: 6vw;
                 font-weight: 300;
                 color: $color-washed-violet;
             }
 
-            a:last-child {
-                padding-bottom: 5rem;
-            }
+           
 
             a {
                 color: $color-rosybrown;
@@ -257,51 +287,73 @@
                 .card {
 
 
-                    width: 50%;
+                    width: 56%;
                     display: flex;
-                    margin: 3rem auto;
+                    margin: 2rem auto;
                     height: 10vw;
-                    border-radius: 85px;
+                    border-radius: 34px;
                     background: #6d316d;
                     box-shadow: 13px 13px 26px #4a214a,
                         -13px -13px 26px #904190;
+
+                    @include responsive_960 {
+                        border-radius: 22px;
+                    }
+
+                    @include responsive_384-767 {
+                        border-radius: 10px;
+                    }
 
                     .card_image {
                         background-size: cover;
                         background-position: center;
                         background-repeat: no-repeat;
                         width: 20vw;
-                        border-radius: 60px 0px 0px 60px;
+                        border-radius: 34px 0px 0px 34px;
 
+                        @include responsive_960 {
+                            border-radius: 24px 0px 0px 24px;
+                        }
+
+                        @include responsive_384-767 {
+                            border-radius: 10px 0px 0px 10px;
+                        }
                     }
 
-                    // .img1 {
-                    //     background-image: url("/images/shutterstock_793330702.jpg");
-                    // }
+                    img {
+                        border-radius: 46px;
+                    }
 
-                    // .img2 {
-                    //     background-image: url("/images/shutterstock_1704058684.jpg");
-                    // }
+                    .img1 {
+                        background-image: url("/images/shutterstock_793330702.jpg");
+                    }
 
-                    // .img3 {
-                    //     background-image: url("/images/shutterstock_532250035.jpg");
-                    // }
+                    .img2 {
+                        background-image: url("/images/shutterstock_1704058684.jpg");
+                    }
 
-                    // .img4 {
-                    //     background-image: url("/images/shutterstock_495464569.jpg");
-                    // }
+                    .img3 {
+                        background-image: url("/images/shutterstock_532250035.jpg");
+                    }
 
-                    // .img5 {
-                    //     background-image: url("/images/shutterstock_1713078307.jpg");
-                    // }
+                    .img4 {
+                        background-image: url("/images/shutterstock_495464569.jpg");
+                    }
+
+                    .img5 {
+                        background-image: url("/images/shutterstock_1713078307.jpg");
+                    }
 
                     .card_text {
 
                         font-family: "Montserrat", sans-serif;
                         font-weight: 200;
                         font-size: 4vw;
-                        padding: 0.8rem 0 0 1rem;
+                        padding: 1.8rem 0px 0px 2rem;
+                        @include responsive_384-767 {
+                            padding: 12px 0px 0px 12px;
 
+                        }
                     }
 
                 }
@@ -311,7 +363,9 @@
                     // transform: scale(0.7);
                 }
             }
-
+            .card:last-child {
+                margin-bottom: 0rem;
+            }
 
         }
 
@@ -322,29 +376,36 @@
     #galerija_home {
 
         background-color: $color1;
-
+        @include responsive_384-767 {
+            transform: translateY(35px);
+        }
         .container {
 
-            
+
             margin-top: 50px;
             border-radius: 0px;
             background: $color1;
             box-shadow: 12px 12px 24px #562756,
                 -12px -12px 24px #843b84;
-            transform: translateY(-220px);
+            transform: translateY(-174px);
+
             @include responsive_384-767 {
                 transform: translateY(-136px);
 
             }
+
             .slider {
                 width: 90%;
                 margin: auto;
-                padding-bottom: 2rem;
+                padding-bottom: 4rem;
+
                 @include responsive_384-767 {
                     width: 100%;
                 }
+
                 img {
                     width: 95%;
+
                     @include responsive_384-767 {
                         width: 100%;
                     }
@@ -360,24 +421,182 @@
 
             .title {
                 font-family: $montserrat;
-                font-size: 8vw;
+                font-size: 6vw;
                 font-weight: 300;
                 color: $color-washed-violet;
-                margin-left: 100px;
-                padding: 4rem 0 2rem;
+                width: 70%;
+                margin: auto;
+                padding: 1rem 0 2rem;
             }
         }
     }
 
-}
+    #kontaktai_home {
 
-// .slick-prev:before{
-//     font-size: 300px!important;
-//     position: absolute!important;
-//     z-index: 999999999!important;
-//     color: darkgoldenrod!important;
-//     top: 0!important;
-//     bottom: 0!important;
-//     margin: auto!important;
-//     left: -30px!important;
-// }
+        background-color: rgb(183, 165, 192);
+
+        // transform: translateY(-146px);
+        .background_orchid {
+            position: relative;
+            background-image: url("/images/pexels-brett-sayles-2291811.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 60vh;
+
+            @include responsive_960 {
+                height: 90vh;
+            }
+            @include responsive_384-767 {
+                height: 100vh;
+
+            }
+
+            .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #531b53;
+                opacity: 0.9;
+
+                .title {
+                    display: flex;
+                    font-family: $montserrat;
+                    font-size: 6vw;
+                    font-weight: 300;
+                    color: $color-washed-violet;
+                    width: 70%;
+                    margin: auto;
+                    padding: 2rem 0 2rem;
+                    
+            @include responsive_384-767 {
+                padding: 2rem 0 0;
+            }
+                }
+
+                .container {
+                    margin: auto;
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    .contact {
+
+                        width: 50%;
+
+                        @include responsive_960 {
+                            width: 100%;
+                        }
+
+                        @include responsive_384-767 {}
+
+                        .icon-box {
+
+                            color: $color-rosybrown;
+                            display: flex;
+                            align-items: center;
+                            font-weight: 200;
+                            font-family: $montserrat;
+                            font-size: 2rem;
+                            margin: 2rem;
+
+                            @include responsive_384-767 {
+                font-size: 18px;
+                            }
+
+
+                            .round_frame {
+                                position: relative;
+                                background-color: transparent;
+                                border: 2px solid $color-rosybrown;
+                                height: 2.5rem;
+                                width: 2.5rem;
+                                overflow: hidden;
+                                border-radius: 50%;
+                                margin-right: 1rem;
+
+                                i {
+                                    display: flex;
+                                    justify-content: center;
+                                    line-height: 1.9;
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+
+                    .contact_form {
+                        width: 50%;
+                        margin-top: 2rem;
+
+                        @include responsive_960 {
+                            padding-top: 2rem;
+                            width: 90%;
+                            margin: auto;
+                        }
+
+                        @include responsive_384-767 {
+                            margin-top: 0;
+                            padding-top: 0;
+                        }
+
+                        input {
+                            width: 100%;
+                            margin-bottom: 2rem;
+                            padding: 0.5rem 2rem;
+                            font-size: 20px;
+                            border-radius: 16px;
+                            background-color: $color1;
+                            color: $color-rosybrown;
+                            border: none;
+                            
+                        @include responsive_384-767 {
+                            margin-bottom: 1rem;
+                            font-size: 14px;
+                        }
+
+
+                        }
+
+                        textarea {
+                            width: 100%;
+                            margin-bottom: 2rem;
+                            padding: 11px 27px;
+                            font-size: 20px;
+                            border-radius: 16px;
+                            background-color: $color1;
+                            color: $color-rosybrown;
+                            border: none;
+                            @include responsive_384-767 {
+                               margin-bottom: 10px;
+                               padding: 6px 32px;
+                               font-size: 14px;
+                            }
+                        }
+
+                        ::placeholder {
+                            color: $color-rosybrown;
+                            opacity: 0.7;
+                        }
+
+                        button {
+                            width: 25%;
+                            padding: 7px;
+                            background-color: #490e49;
+                            border: none;
+                            color: $color-rosybrown;
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+    }
+
+}

@@ -45,11 +45,11 @@
         <section id="mokymai_home">
 
 
-            {{-- <video muted autoplay loop>
+            <video muted autoplay loop>
                 <source src="video/1.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 Your browser does not support tthe video tag.
-            </video> --}}
+            </video>
 
 
             <div class="video-overlay">
@@ -130,14 +130,52 @@
                     <div><img src="images/20171205_194334.jpg" alt="" /></div>
                     <div><img src="images/20180129_162742.jpg" alt="" /></div>
                     <div><img src="images/20180223_132054.jpg" alt="" /></div>
-                    {{-- <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button> --}}
-                    
+
                 </div>
             </div>
 
         </section>
 
+        <section id="kontaktai_home">
+
+            <div class="background_orchid">
+
+                <div class="overlay">
+                    <div class="title">Kontaktai</div>
+                    <div class="container">
+                        <div class="contact">
+                            <div class="icon-box">
+                                <div class="round_frame"><i class="fas fa-map-marker-alt"></i></div>
+                                Veiverių g. 150b ,Kaunas
+                            </div>
+                            <div class="icon-box">
+                                <div class="round_frame"><i class="fas fa-phone-alt"></i></div>
+                                +370 67532865
+                            </div>
+                            <div class="icon-box">
+                                <div class="round_frame"><i class="fas fa-hourglass"></i></i></div>
+                                Darbo laikas I-V 10-17 val
+                            </div>
+                        </div>
+                        <div class="contact_form">
+                            <form action="">
+                                
+                                <input type="text" id="fname" name="fname" placeholder="Vardas"><br>
+                                
+                                <input type="text" id="lname" name="lname" placeholder="El. pašto adresas"><br><br>
+                                <textarea rows="3" cols="50" name="" id="" cols="30" rows="10" placeholder="Žinutė"></textarea>
+                                <button type="submit" >Siūsti</button> 
+                            </form>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
 
 
 
@@ -153,9 +191,20 @@
 
 
 
-
-
+{{-- 
+@include responsive_1200 {
+    
+}
+@include responsive_960 {
+    
+}
+@include responsive_384-767 {
+   
+} 
+--}}
 
 
 
 @endsection
+@include('layouts.footer')
+

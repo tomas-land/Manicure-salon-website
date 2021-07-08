@@ -1,88 +1,101 @@
-// footer {
-// 	width: 100%;
-// 	margin-top: 100px;
-// 	background-color: #3d0e3d;
-// 	height: 30vh;
-// 	text-align: center;
-// 	span {
-// 		text-align: center;
-// 		font-family: 'Jost', sans-serif;
-// 		font-weight: 300;
-// 		font-size: 0.9rem;
-// 		color: rosybrown;
-// 	}
-// 	.container {
-//         display: flex;
-//         justify-content: space-between;
-//         flex-wrap: wrap;
-// 		max-width: 1300px;
-// 		height: 80%;
-// 		margin: auto;
-//         color: rosybrown;
-//         @include responsive {
-            
-//         }
+footer {
+	width: 100%;
+	
+	background-color: #3d0e3d;
+	
+	text-align: center;
+	.rights {
+		text-align: center;
+		font-family: 'Jost', sans-serif;
+		font-weight: 300;
+		font-size: 0.9rem;
+		color: rosybrown;
+        padding: 1rem ;
+	}
+	.container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+		max-width: 80%;
+		height: 80%;
+		margin: auto;
+        color: rosybrown;
+        padding-top: 5rem;
 
-// 		.column {
-// 			&__logo_box {
-//                 width: 25%;
-//                 @include responsive {
-//                     width: 50%;
-//                     margin: auto;
-//                         }
+		.column {
+			&__logo_box {
+                width: 25%;
+                @include responsive_384-767 {
+                    width: 100%;
+                    margin: auto;
+                } 
                 
-//                 img{
-//                     margin-top: 50px;
-//                     width: 150px;
-//                 }
-//             }
-//             &__socmedia_box{
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: center;
-//                 width: 25%;
-//                 @include responsive {
-//                     width: 100%;
-//                     margin: auto;
-//                         }
-//                 svg{
-//                 fill:#6d316d;
-//                 }
-//             }
-// 			&__contact {
+                img{
+                    
+                    width: 100%;
+                    @include responsive_384-767 {
+                        width: 50%;
+                        padding-right: 1rem;
+                    } 
+                }
+            }
+            &__socmedia_box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding-top: 3rem;
+                @include responsive_960 {
+    
+                }
+                @include responsive_384-767 {
+                   
+                } 
+                svg{
+                fill:#6d316d;
+                width: 40px;
+                height: 40px;
+                margin-right: 1rem;
+                @include responsive_384-767 {
+                    margin: 1rem;
+                    width: 30px;
+                height: 30px;
+                } 
+                }
+            }
+			&__contact {
                 
     
-// 				width: 25%;
+				width: 25%;
 				
-// 				line-height: 0.5;
-//                 text-align: left;
-//                 @include responsive {
-//             width: 50%;
-//             margin: auto;
-//                 }
+				line-height: 0.5;
+                text-align: left;
+                @include responsive_384-767 {
+                    display: none;
+                } 
 				
-// 				a {
-// 					color: rosybrown;
-// 					font-family: 'Jost', sans-serif;
-// 					letter-spacing: 1px;
-// 					font-weight: 300;
-// 				}
-// 				h2 {
-//                     margin-top: 0;
-//                 padding: 0;
-// 					letter-spacing: 3px;
-// 					font-size: 1.5rem;
-// 					font-family: 'Jost', sans-serif;
-// 					font-weight: 300;
-// 					padding-bottom: 30px;
+				a {
+					color: rosybrown;
+					font-family: 'Jost', sans-serif;
+					letter-spacing: 1px;
+					font-weight: 300;
+				}
+				h2 {
+                    margin-top: 1rem;
+                padding: 0;
+					letter-spacing: 3px;
+					font-size: 1.5rem;
+					font-family: 'Jost', sans-serif;
+					font-weight: 300;
+					padding-bottom: 20px;
 					
-// 				}
-// 				h4 {
-// 					font-family: 'Jost', sans-serif;
-// 					letter-spacing: 1px;
-// 					font-weight: 300;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+				}
+				h4 {
+					font-family: 'Jost', sans-serif;
+					letter-spacing: 1px;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}

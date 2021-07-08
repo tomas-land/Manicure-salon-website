@@ -23,7 +23,7 @@
     line-height: 0;
 
     position: absolute;
-    top: 50%;
+    top: 30%;
 
     display: block;
 
@@ -71,7 +71,7 @@
     line-height: 1;
 
     opacity: .75;
-    color: rgb(160, 44, 44);
+    color: rgb(73, 10, 73);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -79,7 +79,8 @@
 
 .slick-prev
 {
-    left: 25px;
+   
+    left: -44px;
 }
 [dir='rtl'] .slick-prev
 {

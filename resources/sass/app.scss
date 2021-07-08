@@ -3,6 +3,7 @@
 @import 'utilities/_variables.scss';
 @import 'utilities/_mixins.scss';
 @import 'utilities/_variables.scss';
+@import 'utilities/_hamburgers.scss';
 // @import 'utilities/_slick-theme.scss';
 
 
@@ -17,7 +18,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&display=swap');// Variables
 
-
+// Font-Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
 // LAYOUT
 @import 'layout/_header.scss';
 @import 'layout/_footer.scss';

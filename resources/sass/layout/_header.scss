@@ -1,13 +1,16 @@
 header {
+
     background-color: $color1;
     // padding-top: 2rem;
     max-width: 80%;
-    margin: auto;
-
+    margin: 2rem auto 0;
+    @include responsive_384-767 {
+        margin: 1rem auto 0;
+    } 
     .container {
         display: flex;
         flex-wrap: wrap;
-	
+
         .shadow {
             margin: auto;
             width: 100%;
@@ -15,6 +18,17 @@ header {
             border-radius: 78%;
             background: transparent;
             box-shadow: -34px 80px 78px #2c142c, -39px -43px 75px #6d316d;
+
+            @include responsive_1200 {
+                height: 4vh;
+                width: 100%;
+                
+            }
+            @include responsive_384-767 {
+                height: 7vh;
+            width: 100vw;
+            transform: translateY(-5px);
+        } 
         }
 
         .socmedia {
@@ -23,9 +37,11 @@ header {
             display: flex;
             justify-content: flex-start;
             padding-left: 2rem;
-	@include responsive_384-767 {
-			transform: translateY(1rem);
-		}
+
+            @include responsive_384-767 {
+                transform: translateY(1rem);
+            }
+
             svg {
                 width: 2rem;
                 height: 2rem;
@@ -59,11 +75,12 @@ header {
 
         .hamburger {
             display: none;
-padding: 0;
+            padding: 0;
+
             @include responsive_384-767 {
                 display: block;
                 width: 30%;
-				transform: translateY(1rem);
+                transform: translateY(1rem);
             }
         }
 
@@ -78,7 +95,7 @@ padding: 0;
     .menu {
 
 
-        margin-top: 2rem;
+        margin-top: 11px;
 
 
 
