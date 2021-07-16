@@ -138,6 +138,8 @@ header {
     }
 
     .slide_menu {
+        @include responsive_384-767 {
+       
         position: absolute;
         z-index: 99;
         top: 10%;
@@ -151,7 +153,7 @@ header {
 
         display: block;
         transition: 0.4s;
-
+        }
         ul {
             padding: 0;
             margin: 0;
