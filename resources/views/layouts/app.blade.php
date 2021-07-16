@@ -18,15 +18,15 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <!-- Styles -->
-  
-   <!-- Add the slick-theme.css if you want default styling -->
-{{-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- Add the slick-theme.css if you want default styling -->
+    {{-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> --}}
 
     <link href="/slick/slick-theme.css" rel="stylesheet">
     <link href="/slick/slick.css" rel="stylesheet">
-  <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/> --}}
@@ -107,35 +107,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <script>
-        $('.slider').slick({
-            
-            arrows: true,
-            centerMode: true,
-            centerPadding: '30px',
-            slidesToShow: 3,
-            responsive: [{
-                    breakpoint: 908,
-                    settings: {
-                        arrows: true,
-                        centerMode: true,
-                        centerPadding: '0px',
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 760,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    </script>
+    <script src="js/home_slider.js"></script>
+    <script src="js/slide_menu.js"></script>
 </body>
 
 </html>
