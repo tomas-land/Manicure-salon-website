@@ -18,7 +18,7 @@
                             d="m377 0h-242c-74.4375 0-135 60.5625-135 135v242c0 74.4375 60.5625 135 135 135h242c74.4375 0 135-60.5625 135-135v-242c0-74.4375-60.5625-135-135-135zm45 332c0 49.625-40.375 90-90 90h-152c-49.625 0-90-40.375-90-90v-152c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" />
                     </svg></a>
             </div>
-            <button class="hamburger hamburger--elastic " type="button">
+            <button class="hamburger hamburger--elastic no_highlights" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
@@ -74,7 +74,7 @@
         <div class="menu">
             <ul class="ul">
                 <li>
-                    {{-- <a href="{{ route('galerija.index') }}">GALERIJA</a> --}}
+                    <a href="">GALERIJA</a>
                 </li>
 
                 <li>
