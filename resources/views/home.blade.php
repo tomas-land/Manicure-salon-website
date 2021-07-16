@@ -45,7 +45,7 @@
         <section id="mokymai_home">
 
 
-            <video muted autoplay>
+            <video poster="images/20171006_122628.jpg">
                 <source src="video/com.mp4" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 Your browser does not support tthe video tag.
