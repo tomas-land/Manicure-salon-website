@@ -1,0 +1,175 @@
+#paslaugos {
+    height: auto;
+    background-color: $color1;
+
+    .top {
+        height: 20vh;
+        position: relative;
+
+        .background_orchid {
+            position: absolute;
+            background-image: url("/images/pexels-brett-sayles-2291811.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: 57% 102%;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 20vh;
+
+        }
+
+        .overlay {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $color1;
+            opacity: 0.8;
+
+            .title {
+
+                font-family: $montserrat;
+                text-align: right;
+                padding-right: 240px;
+                font-weight: 100;
+                color: $color-washed-violet;
+                font-size: 80px;
+            }
+        }
+    }
+
+    #pricelist {
+        width: 80%;
+        margin: auto;
+
+
+        .container {
+            min-height: 317px;
+            height: auto;
+            margin: 3rem;
+            border-radius: 50px;
+            background: #6d316d;
+            box-shadow: -13px 13px 26px #4a214a,
+                13px -13px 26px #904190;
+            display: flex;
+
+            .image {
+                height: auto;
+                width: 50%;
+                background-image: url("/images/shutterstock_793330702.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 50px 0 0 50px;
+                box-shadow: inset 91px 13px 127px 26px rgba(109,49,109,1);
+            }
+
+            .list {
+                width: 60%;
+.btn-edit{
+    color: $color-rosybrown;
+    margin-left: 2rem;
+}
+.btn-delete{
+    outline: none;
+border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: $color-rosybrown;
+}
+                .title {
+                    width: 80%;
+                    margin: auto;
+                    font-family: $montserrat;
+                    font-weight: 100;
+                    color: $color-washed-violet;
+                    font-size: 60px;
+
+                    margin-top: 1rem;
+                }
+.td-align-center{
+    text-align: center;
+}
+.td-align-start{
+    text-align: start;
+}
+                table {
+                    margin: auto;
+                    width: 80%;
+                    margin-top: 1rem;
+                    color: $color-rosybrown;
+                    font-size: 20px;
+
+                    span {
+                        font-family: $montserrat;
+                        font-weight: 400;
+                    }
+
+                    .fas .red{
+                        font-size: 16px;
+                        color: darkgoldenrod;
+                      
+                    }
+                }
+            }
+        }
+
+        .container2 {
+            .image {
+                background-image: url("/images/shutterstock_1414233128.jpg");
+            }
+
+            .list {
+                padding-top: 1rem;
+            }
+        }
+        .container3 {
+            .image {
+                background-image: url("/images/shutterstock_1704058684.jpg");
+            }
+            
+        }
+        .container4 {
+            .image {
+                background-image: url("/images/shutterstock_532250035.jpg");
+            }
+           
+        }
+        .container5 {
+            .image {
+                background-image: url("/images/shutterstock_495464569.jpg");
+            }
+
+        }
+        .container6 {
+            .image {
+                background-image: url("/images/shutterstock_1713078307.jpg");
+            }
+
+        }
+
+
+    }
+    .btn-add-subservice{
+
+
+        .btn{
+            border-radius: 8px;
+            display: block;
+            width: 30%;
+            margin: auto;
+            border: 1px solid $color-washed-violet;
+            padding: 1.2rem ;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: $color-washed-violet;
+            font-family: $montserrat;
+           text-decoration: none;
+           font-size: 20px;
+           
+        }
+        
+    }
+
+}

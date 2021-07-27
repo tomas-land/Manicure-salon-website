@@ -17,6 +17,18 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+// Route::resource('paslaugos', App\Http\Controllers\PricelistController::class);
+
+
+Route::resource('paslaugos', App\Http\Controllers\ServiceController::class);
+
+
+// Route::resource('paslaugos', App\Http\Controllers\PricelistController::class);
+    // Route::resource('books', App\Http\Controllers\BookController::class);

@@ -26,12 +26,14 @@
 // LAYOUT
 @import 'layout/_header.scss';
 @import 'layout/_footer.scss';
+@import 'layout/_crud_layout.scss';
 
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
 
 // PAGES
 @import 'pages/_home.scss';
+@import 'pages/_paslaugos.scss';
 
 * {
 	box-sizing: border-box;

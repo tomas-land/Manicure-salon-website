@@ -17,10 +17,10 @@ footer {
         justify-content: space-between;
         flex-wrap: wrap;
 		max-width: 80%;
-		height: 80%;
+		height: 70%;
 		margin: auto;
         color: rosybrown;
-        padding-top: 5rem;
+        padding-top: 3rem;
 
 		.column {
 			&__logo_box {
@@ -32,7 +32,7 @@ footer {
                 
                 img{
                     
-                    width: 63%;
+                    width: 52%;
                     @include responsive_384-767 {
                         width: 50%;
                         padding-right: 1rem;
@@ -44,7 +44,7 @@ footer {
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                padding-top: 3rem;
+              
                 @include responsive_960 {
     
                 }

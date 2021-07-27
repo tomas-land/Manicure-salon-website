@@ -38,8 +38,8 @@
 
 </head>
 
-<body>
-    {{-- <div id="app">
+{{-- <body>
+    <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -53,7 +53,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                    </ul>
+                    </ul> --}}
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -90,16 +90,16 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
+                {{-- </div>
             </div>
         </nav> --}}
-
+@yield('header')
     <main class="wrapper">
-        @yield('header')
+        
         @yield('content')
     </main>
 
-    @yield('footer')
+
 
 
 
@@ -109,6 +109,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/home_slider.js"></script>
     <script src="js/slide_menu.js"></script>
+@yield('footer')
 </body>
 
 </html>

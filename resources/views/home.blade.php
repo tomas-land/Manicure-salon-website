@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @include('layouts.header')
 @section('content')
-
     <div id="home">
         <section id="front_home">
             <div class="background_orchid">

@@ -1,5 +1,5 @@
 header {
-
+height: 13.5vh;
     background-color: $color1;
     // padding-top: 2rem;
 
@@ -118,14 +118,14 @@ header {
 
             li {
                 list-style: none;
-                padding-bottom: 0.6rem;
+                padding-bottom: 0.4rem;
 
                 a {
                     color: $color-rosybrown;
                     font-weight: 700;
                     text-decoration: none;
                     letter-spacing: 2px;
-                    font-size: 0.5rem;
+                    font-size: 0.6rem;
                     padding: 0.3rem;
                     font-family: Nunito;
 
@@ -138,8 +138,10 @@ header {
     }
 
     .slide_menu {
-        @include responsive_384-767 {
-       
+        
+       display: none;
+
+       @include responsive_384-767 {
         position: absolute;
         z-index: 99;
         top: 10%;
@@ -153,7 +155,7 @@ header {
 
         display: block;
         transition: 0.4s;
-        }
+        
         ul {
             padding: 0;
             margin: 0;
@@ -179,7 +181,7 @@ header {
         }
        
     }
-
+    }
     .is-active {
         right: 0%;
 

@@ -9,7 +9,7 @@
             </div>
             <div class="column__logo_box">
                 <div class="column__logo">
-                    <img src="images/cropped.png" alt="" />
+                    <img src="{{ asset('images/cropped.png') }}" alt="" />
                 </div>
             </div>
             <div class="column__socmedia_box">

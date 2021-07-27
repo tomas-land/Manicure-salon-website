@@ -7480,6 +7480,7 @@ readers do not read off random characters that represent icons */
 }
 
 header {
+  height: 13.5vh;
   background-color: #6d316d;
   margin: 2rem auto 0;
 }
@@ -7577,19 +7578,22 @@ header .menu ul {
 }
 header .menu ul li {
   list-style: none;
-  padding-bottom: 0.6rem;
+  padding-bottom: 0.4rem;
 }
 header .menu ul li a {
   color: #bc8f8f;
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 2px;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   padding: 0.3rem;
   font-family: Nunito;
 }
 header .menu ul li a:hover {
   border-bottom: 4px solid #bc8f8f;
+}
+header .slide_menu {
+  display: none;
 }
 @media (max-width: 700px) {
   header .slide_menu {
@@ -7606,25 +7610,25 @@ header .menu ul li a:hover {
     display: block;
     transition: 0.4s;
   }
-}
-header .slide_menu ul {
-  padding: 0;
-  margin: 0;
-}
-header .slide_menu li {
-  list-style-type: none;
-}
-header .slide_menu li:hover {
-  background-color: #572157;
-}
-header .slide_menu a {
-  width: 100%;
-  display: block;
-  text-decoration: none;
-  color: darksalmon;
-  font-family: "Montserrat", sans-serif;
-  padding: 1.5rem;
-  border-top: 1px solid #572157;
+  header .slide_menu ul {
+    padding: 0;
+    margin: 0;
+  }
+  header .slide_menu li {
+    list-style-type: none;
+  }
+  header .slide_menu li:hover {
+    background-color: #572157;
+  }
+  header .slide_menu a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: darksalmon;
+    font-family: "Montserrat", sans-serif;
+    padding: 1.5rem;
+    border-top: 1px solid #572157;
+  }
 }
 header .is-active {
   right: 0%;
@@ -7648,10 +7652,10 @@ footer .container {
   justify-content: space-between;
   flex-wrap: wrap;
   max-width: 80%;
-  height: 80%;
+  height: 70%;
   margin: auto;
   color: rosybrown;
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 footer .container .column__logo_box {
   width: 25%;
@@ -7663,7 +7667,7 @@ footer .container .column__logo_box {
   }
 }
 footer .container .column__logo_box img {
-  width: 63%;
+  width: 52%;
 }
 @media (max-width: 700px) {
   footer .container .column__logo_box img {
@@ -7676,7 +7680,6 @@ footer .container .column__socmedia_box {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 3rem;
 }
 footer .container .column__socmedia_box svg {
   fill: #6d316d;
@@ -7722,6 +7725,83 @@ footer .container .column__contact h4 {
   font-weight: 300;
 }
 
+.crud_layout {
+  min-height: 45vh;
+  position: relative;
+  background-image: url("/images/pexels-brett-sayles-2291811.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crud_layout .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #6d316d;
+  opacity: 0.8;
+}
+.crud_layout .card {
+  margin: 3rem 0;
+  z-index: 999;
+  border-radius: 10px;
+  width: 60%;
+  background-color: rgba(61, 14, 61, 0.6);
+}
+.crud_layout .card .card-header {
+  width: 90%;
+  margin: auto;
+  padding: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+  color: #c39fd3;
+  font-size: 20px;
+}
+.crud_layout .card .card-body {
+  margin: auto;
+  background-color: rgba(109, 49, 109, 0.5);
+  padding: 1rem;
+  height: 70%;
+}
+.crud_layout .card .card-body form {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.crud_layout .card .card-body form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+.crud_layout .card .card-body form button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 60%;
+  background-color: #490e49;
+  border: none;
+  color: #bc8f8f;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.crud_layout .card .card-body form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.image {
+  height: 100px;
+  width: 40%;
+  background-image: url("/images/shutterstock_1713078307.jpg");
+}
+
 #home #front_home .background_orchid {
   position: relative;
   background-image: url("/images/pexels-brett-sayles-2291811.jpg");
@@ -7745,6 +7825,12 @@ footer .container .column__contact h4 {
   right: 0;
   left: 0;
   bottom: 0px;
+  transform: translateY(6rem);
+}
+@media (max-width: 1200px) {
+  #home #front_home .background_orchid svg {
+    transform: translateY(2rem);
+  }
 }
 @media (max-width: 700px) {
   #home #front_home .background_orchid svg {
@@ -7841,7 +7927,7 @@ footer .container .column__contact h4 {
 }
 @media (max-width: 700px) {
   #home #mokymai_home .video-overlay {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 2%, #1e0120 38%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) -56%, #1e0120 32%);
   }
 }
 #home #mokymai_home .video-overlay .mokymai_content {
@@ -8094,7 +8180,7 @@ footer .container .column__contact h4 {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: auto;
+  height: 70vh;
 }
 @media (max-width: 960px) {
   #home #kontaktai_home .background_orchid {
@@ -8241,6 +8327,141 @@ footer .container .column__contact h4 {
   background-color: #490e49;
   border: none;
   color: #bc8f8f;
+}
+
+#paslaugos {
+  height: auto;
+  background-color: #6d316d;
+}
+#paslaugos .top {
+  height: 20vh;
+  position: relative;
+}
+#paslaugos .top .background_orchid {
+  position: absolute;
+  background-image: url("/images/pexels-brett-sayles-2291811.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 57% 102%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 20vh;
+}
+#paslaugos .top .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #6d316d;
+  opacity: 0.8;
+}
+#paslaugos .top .overlay .title {
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+  padding-right: 240px;
+  font-weight: 100;
+  color: #c39fd3;
+  font-size: 80px;
+}
+#paslaugos #pricelist {
+  width: 80%;
+  margin: auto;
+}
+#paslaugos #pricelist .container {
+  min-height: 317px;
+  height: auto;
+  margin: 3rem;
+  border-radius: 50px;
+  background: #6d316d;
+  box-shadow: -13px 13px 26px #4a214a, 13px -13px 26px #904190;
+  display: flex;
+}
+#paslaugos #pricelist .container .image {
+  height: auto;
+  width: 50%;
+  background-image: url("/images/shutterstock_793330702.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50px 0 0 50px;
+  box-shadow: inset 91px 13px 127px 26px #6d316d;
+}
+#paslaugos #pricelist .container .list {
+  width: 60%;
+}
+#paslaugos #pricelist .container .list .btn-edit {
+  color: #bc8f8f;
+  margin-left: 2rem;
+}
+#paslaugos #pricelist .container .list .btn-delete {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #bc8f8f;
+}
+#paslaugos #pricelist .container .list .title {
+  width: 80%;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  color: #c39fd3;
+  font-size: 60px;
+  margin-top: 1rem;
+}
+#paslaugos #pricelist .container .list .td-align-center {
+  text-align: center;
+}
+#paslaugos #pricelist .container .list .td-align-start {
+  text-align: start;
+}
+#paslaugos #pricelist .container .list table {
+  margin: auto;
+  width: 80%;
+  margin-top: 1rem;
+  color: #bc8f8f;
+  font-size: 20px;
+}
+#paslaugos #pricelist .container .list table span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+#paslaugos #pricelist .container .list table .fas .red {
+  font-size: 16px;
+  color: darkgoldenrod;
+}
+#paslaugos #pricelist .container2 .image {
+  background-image: url("/images/shutterstock_1414233128.jpg");
+}
+#paslaugos #pricelist .container2 .list {
+  padding-top: 1rem;
+}
+#paslaugos #pricelist .container3 .image {
+  background-image: url("/images/shutterstock_1704058684.jpg");
+}
+#paslaugos #pricelist .container4 .image {
+  background-image: url("/images/shutterstock_532250035.jpg");
+}
+#paslaugos #pricelist .container5 .image {
+  background-image: url("/images/shutterstock_495464569.jpg");
+}
+#paslaugos #pricelist .container6 .image {
+  background-image: url("/images/shutterstock_1713078307.jpg");
+}
+#paslaugos .btn-add-subservice .btn {
+  border-radius: 8px;
+  display: block;
+  width: 30%;
+  margin: auto;
+  border: 1px solid #c39fd3;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #c39fd3;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 * {
