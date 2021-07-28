@@ -13,8 +13,8 @@
             position: relative;
             background-image: url("/images/pexels-brett-sayles-2291811.jpg");
             background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
+            background-size: 208%;
+            background-position: top;
             background-repeat: no-repeat;
             width: 100%;
             height: 80vh;
@@ -54,8 +54,9 @@
             .background_transp {
                 width: 100%;
                 height: 100%;
-                background-color: $color1;
-                opacity: 0.5;
+                background-color: rgba(92, 24, 92, 0.5);
+
+               
             }
 
             .vb_logo {

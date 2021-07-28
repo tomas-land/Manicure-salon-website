@@ -5,16 +5,26 @@
     .top {
         height: 20vh;
         position: relative;
-
+        @include responsive_384-767 {
+            height: 14vh;
+        
+        } 
         .background_orchid {
-            position: absolute;
+           
             background-image: url("/images/pexels-brett-sayles-2291811.jpg");
             background-attachment: fixed;
-            background-size: cover;
-            background-position: 57% 102%;
-            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: top;
+            background-repeat: space;
             width: 100vw;
             height: 20vh;
+            position: absolute;
+            @include responsive_384-767 {
+                height: 14vh;
+                background-size: 140%;
+            background-position: top;
+            background-repeat: space;
+            } 
 
         }
 
@@ -25,8 +35,11 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: $color1;
-            opacity: 0.8;
+            background-color: rgba(109, 49, 109, 0.8);
+            @include responsive_384-767 {
+                justify-content: center;
+            } 
+            
 
             .title {
 
@@ -36,6 +49,11 @@
                 font-weight: 100;
                 color: $color-washed-violet;
                 font-size: 80px;
+                @include responsive_384-767 {
+                    font-size: 60px;
+                    padding: 0;
+                    text-align: center;
+                } 
             }
         }
     }
@@ -43,7 +61,9 @@
     #pricelist {
         width: 80%;
         margin: auto;
-
+        @include responsive_384-767 {
+            width: 100%;
+        } 
 
         .container {
             min-height: 317px;
@@ -54,7 +74,12 @@
             box-shadow: -13px 13px 26px #4a214a,
                 13px -13px 26px #904190;
             display: flex;
-
+            @include responsive_384-767 {
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+                
+            } 
             .image {
                 height: auto;
                 width: 50%;
@@ -62,22 +87,40 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 border-radius: 50px 0 0 50px;
-                box-shadow: inset 91px 13px 127px 26px rgba(109,49,109,1);
+                box-shadow: inset 91px 13px 127px 26px rgba(109, 49, 109, 1);
+                @include responsive_384-767 {
+                    width: 100%;
+                    height: 21vh;
+                    border-radius: 50px 50px 0 0 ;
+                    box-shadow: inset 0px -68px 74px 26px #6d316d;
+                    background-position: center;
+                } 
             }
 
             .list {
-                width: 60%;
-.btn-edit{
-    color: $color-rosybrown;
-    margin-left: 2rem;
-}
-.btn-delete{
-    outline: none;
-border: none;
-    background-color: transparent;
-    cursor: pointer;
-    color: $color-rosybrown;
-}
+                @include responsive_384-767 {
+                   transform: translateY(-25px);
+                } 
+
+                .btn-edit {
+                    color: $color-rosybrown;
+                    margin-left: 2rem;
+                    @include responsive_384-767 {
+                        display: none;
+                    } 
+                }
+
+                .btn-delete {
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    color: $color-rosybrown;
+                    @include responsive_384-767 {
+                        display: none;
+                    } 
+                }
+
                 .title {
                     width: 80%;
                     margin: auto;
@@ -87,29 +130,52 @@ border: none;
                     font-size: 60px;
 
                     margin-top: 1rem;
+                    @include responsive_384-767 {
+                        font-size: 30px;
+                        margin:  0 auto;
+                    } 
                 }
-.td-align-center{
-    text-align: center;
-}
-.td-align-start{
-    text-align: start;
-}
+
+                .td-align-center {
+                    text-align: center;
+                    
+                }
+
+                .td-align-start {
+                    text-align: start;
+                }
+
                 table {
                     margin: auto;
                     width: 80%;
                     margin-top: 1rem;
+                    margin-bottom: 1rem;
                     color: $color-rosybrown;
                     font-size: 20px;
+                    @include responsive_384-767 {
+                        width: 90%;
+                        font-size: 16px;
+                        margin-bottom: 1rem;
 
+                    } 
+                    td{
+                        vertical-align: top;
+                        
+                    }
                     span {
                         font-family: $montserrat;
                         font-weight: 400;
+                        padding: 1rem 0;
+                        @include responsive_384-767 {
+                            margin-bottom: 1rem;
+    
+                        } 
                     }
 
-                    .fas .red{
+                    .fas .red {
                         font-size: 16px;
                         color: darkgoldenrod;
-                      
+
                     }
                 }
             }
@@ -124,24 +190,28 @@ border: none;
                 padding-top: 1rem;
             }
         }
+
         .container3 {
             .image {
                 background-image: url("/images/shutterstock_1704058684.jpg");
             }
-            
+
         }
+
         .container4 {
             .image {
                 background-image: url("/images/shutterstock_532250035.jpg");
             }
-           
+
         }
+
         .container5 {
             .image {
                 background-image: url("/images/shutterstock_495464569.jpg");
             }
 
         }
+
         .container6 {
             .image {
                 background-image: url("/images/shutterstock_1713078307.jpg");
@@ -151,25 +221,26 @@ border: none;
 
 
     }
-    .btn-add-subservice{
+
+    .btn-add-subservice {
 
 
-        .btn{
+        .btn {
             border-radius: 8px;
             display: block;
             width: 30%;
             margin: auto;
             border: 1px solid $color-washed-violet;
-            padding: 1.2rem ;
+            padding: 1.2rem;
             margin-bottom: 2rem;
             text-align: center;
             color: $color-washed-violet;
             font-family: $montserrat;
-           text-decoration: none;
-           font-size: 20px;
-           
+            text-decoration: none;
+            font-size: 20px;
+
         }
-        
+
     }
 
 }

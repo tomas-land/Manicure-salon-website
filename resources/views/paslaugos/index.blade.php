@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('layouts.header')
 @section('content')
     <div id="paslaugos">
 
@@ -200,13 +199,13 @@
 
 
         </div>
-        {{-- @auth --}}
+        @auth
             <div class="btn-add-subservice">
                 <a href="{{ route('paslaugos.create') }}" class="btn btn-success">Pridėti paslaugą</a>
             </div>
 
-{{-- 
-        @endauth --}}
+
+        @endauth
 
 
     </div>
@@ -237,4 +236,4 @@
 
 
 @endsection
-@include('layouts.footer')
+

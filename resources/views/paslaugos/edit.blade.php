@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('layouts.header')
 @section('content')
     <div class="crud_layout">
         <div class="overlay">
@@ -14,7 +13,7 @@
                         <div class="form-group">
                             
                             <input type="text" name="name" class="form-control" value="{{ $service->name }}">
-                            <input type="text" name="name" class="form-control" value="{{ $service->price }}">
+                            <input type="text" name="price" class="form-control" value="{{ $service->price }}">
        
 
                 
@@ -30,4 +29,4 @@
     </div>
   
 @endsection
-@include('layouts.footer')
+

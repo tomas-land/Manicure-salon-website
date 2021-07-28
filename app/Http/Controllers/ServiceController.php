@@ -104,6 +104,7 @@ class ServiceController extends Controller
     {
         $service =  SubService::where('id', '=', $id)->first();
         $service->name = $request -> name;
+        $service->price = $request -> price;
         
          $service->save();
  //    

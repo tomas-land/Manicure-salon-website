@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('layouts.header')
 @section('content')
     <div id="home">
         <section id="front_home">
@@ -205,5 +204,5 @@
 
 
 @endsection
-@include('layouts.footer')
+
 

@@ -1,4 +1,4 @@
-@section('footer')
+
     <footer>
         <div class="column container">
             <div class="column__contact">
@@ -39,4 +39,4 @@
 
         
     </footer>
-@endsection
+

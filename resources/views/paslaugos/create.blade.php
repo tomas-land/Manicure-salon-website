@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@include('layouts.header')
 @section('content')
     <div class="crud_layout">
         <div class="overlay">
@@ -39,6 +38,6 @@
     </div>
   
 @endsection
-@include('layouts.footer')
+
 
 
