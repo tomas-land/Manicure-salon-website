@@ -74,10 +74,13 @@
             box-shadow: -13px 13px 26px #4a214a,
                 13px -13px 26px #904190;
             display: flex;
+            justify-content: flex-start;
             @include responsive_384-767 {
                 height: auto;
                 flex-direction: column;
                 justify-content: center;
+                width: 87%;
+                margin: 2rem auto;
                 
             } 
             .image {
@@ -98,8 +101,11 @@
             }
 
             .list {
+                width: 50%;
+                margin: 0 auto;
                 @include responsive_384-767 {
                    transform: translateY(-25px);
+                   width: 100%;
                 } 
 
                 .btn-edit {
@@ -146,8 +152,9 @@
                 }
 
                 table {
+                    
                     margin: auto;
-                    width: 80%;
+                    width: 90%;
                     margin-top: 1rem;
                     margin-bottom: 1rem;
                     color: $color-rosybrown;
@@ -158,6 +165,10 @@
                         margin-bottom: 1rem;
 
                     } 
+                    td:first-child{
+                        
+                        width: 100%;
+                    }
                     td{
                         vertical-align: top;
                         

@@ -87,7 +87,7 @@
                     <table>
                         @foreach ($pedicure_services as $service)
                             <tr>
-                                <td><span>{{ $service->name }}</span></td>
+                                <td ><span>{{ $service->name }}</span></td>
                                 <td class="td-align-center"><span>{{ $service->price }}</span></td>
                                 <td class="td-align-start"><i class="fas fa-euro-sign"></i></td> @auth
                                     <td> <a class="btn-edit " href={{ route('paslaugos.edit', $service->id) }}><i
