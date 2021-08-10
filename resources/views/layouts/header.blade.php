@@ -76,11 +76,10 @@
         <div class="menu">
             <ul class="ul">
                 <li>
-                    <a href="">GALERIJA</a>
-                </li>
-
-                <li>
                     <a href="{{ route('paslaugos.index') }}">PASLAUGOS</a>
+                </li>
+                <li>
+                    <a href="{{ route('galerija.index') }}">GALERIJA</a>
                 </li>
                 <li>
                     <a href="">DOVANŲ KUPONAI</a>
@@ -108,7 +107,7 @@
             <a href="{{ route('paslaugos.index') }}">PASLAUGOS</a>
         </li>
         <li>
-            <a href="">GALERIJA</a>
+            <a href="{{ route('galerija.index') }}">GALERIJA</a>
         </li>
         <li>
             <a href="">DOVANŲ KUPONAI</a>

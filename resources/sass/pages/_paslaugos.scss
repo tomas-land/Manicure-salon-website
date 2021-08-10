@@ -2,68 +2,15 @@
     height: auto;
     background-color: $color1;
 
-    .top {
-        height: 20vh;
-        position: relative;
-        @include responsive_384-767 {
-            height: 14vh;
-        
-        } 
-        .background_orchid {
-           
-            background-image: url("/images/pexels-brett-sayles-2291811.jpg");
-            background-attachment: fixed;
-            background-size: 100%;
-            background-position: top;
-            background-repeat: space;
-            width: 100vw;
-            height: 20vh;
-            position: absolute;
-            @include responsive_384-767 {
-                height: 14vh;
-                background-size: 140%;
-            background-position: top;
-            background-repeat: space;
-            } 
 
-        }
-
-        .overlay {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(109, 49, 109, 0.8);
-            @include responsive_384-767 {
-                justify-content: center;
-            } 
-            
-
-            .title {
-
-                font-family: $montserrat;
-                text-align: right;
-                padding-right: 240px;
-                font-weight: 100;
-                color: $color-washed-violet;
-                font-size: 80px;
-                @include responsive_384-767 {
-                    font-size: 60px;
-                    padding: 0;
-                    text-align: center;
-                } 
-            }
-        }
-    }
 
     #pricelist {
         width: 80%;
         margin: auto;
+
         @include responsive_384-767 {
             width: 100%;
-        } 
+        }
 
         .container {
             min-height: 317px;
@@ -75,14 +22,16 @@
                 13px -13px 26px #904190;
             display: flex;
             justify-content: flex-start;
+
             @include responsive_384-767 {
                 height: auto;
                 flex-direction: column;
                 justify-content: center;
                 width: 87%;
                 margin: 2rem auto;
-                
-            } 
+
+            }
+
             .image {
                 height: auto;
                 width: 50%;
@@ -91,29 +40,43 @@
                 background-repeat: no-repeat;
                 border-radius: 50px 0 0 50px;
                 box-shadow: inset 91px 13px 127px 26px rgba(109, 49, 109, 1);
+
                 @include responsive_384-767 {
                     width: 100%;
                     height: 21vh;
-                    border-radius: 50px 50px 0 0 ;
-                    box-shadow: inset 0px -68px 74px 26px #6d316d;
+                    border-radius: 50px 50px 0 0;
+                    box-shadow: none;
                     background-position: center;
-                } 
+                }
+            }
+
+            .overlay {
+
+                @include responsive_384-767 {
+
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(255, 255, 255);
+                    background: linear-gradient(183deg, rgba(255, 255, 255, 0) 47%, #6d316d 85%);
+                }
             }
 
             .list {
                 width: 50%;
                 margin: 0 auto;
+
                 @include responsive_384-767 {
-                   transform: translateY(-25px);
-                   width: 100%;
-                } 
+                    transform: translateY(-25px);
+                    width: 100%;
+                }
 
                 .btn-edit {
                     color: $color-rosybrown;
                     margin-left: 2rem;
+
                     @include responsive_384-767 {
                         display: none;
-                    } 
+                    }
                 }
 
                 .btn-delete {
@@ -122,9 +85,10 @@
                     background-color: transparent;
                     cursor: pointer;
                     color: $color-rosybrown;
+
                     @include responsive_384-767 {
                         display: none;
-                    } 
+                    }
                 }
 
                 .title {
@@ -133,18 +97,19 @@
                     font-family: $montserrat;
                     font-weight: 100;
                     color: $color-washed-violet;
-                    font-size: 60px;
+                    font-size: 50px;
 
                     margin-top: 1rem;
+
                     @include responsive_384-767 {
                         font-size: 30px;
-                        margin:  0 auto;
-                    } 
+                        margin: 0 auto;
+                    }
                 }
 
                 .td-align-center {
                     text-align: center;
-                    
+
                 }
 
                 .td-align-start {
@@ -152,35 +117,40 @@
                 }
 
                 table {
-                    
+
                     margin: auto;
                     width: 90%;
                     margin-top: 1rem;
                     margin-bottom: 1rem;
                     color: $color-rosybrown;
                     font-size: 20px;
+
                     @include responsive_384-767 {
                         width: 90%;
                         font-size: 16px;
                         margin-bottom: 1rem;
 
-                    } 
-                    td:first-child{
-                        
+                    }
+
+                    td:first-child {
+
                         width: 100%;
                     }
-                    td{
+
+                    td {
                         vertical-align: top;
-                        
+
                     }
+
                     span {
                         font-family: $montserrat;
                         font-weight: 400;
                         padding: 1rem 0;
+
                         @include responsive_384-767 {
                             margin-bottom: 1rem;
-    
-                        } 
+
+                        }
                     }
 
                     .fas .red {

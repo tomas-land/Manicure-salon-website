@@ -28,7 +28,7 @@
                         rerum, suscipit rerum, non laboriosam ut officia? Eius enim deserunt culpa at except
                         am dicta odio!"
                     </p>
-                    <img src="images/pexels-cheda-stankovic-3422099.jpg" alt="">
+                    <img src='images/pexels-cheda-stankovic-3422099.jpg' alt="pexels">
                 </div>
             </div>
             {{-- <div id="btn_rezervacija">
@@ -42,9 +42,9 @@
 
         <section id="mokymai_home">
 
-
-            <video poster="images/20171006_122628.jpg">
-                <source src="video/com.mp4" type="video/mp4">
+ {{-- poster="images/20171006_122628.jpg" --}}
+            <video  autoplay loop>
+                <source src="{{ asset('video/1.mp4') }}" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 Your browser does not support tthe video tag.
             </video>
@@ -122,12 +122,12 @@
                 <div class="slider">
 
 
-                    <div><img src="images/20171006_122628.jpg" alt="" /></div>
-                    <div><img src="images/20171020_220713.jpg" alt="" /></div>
-                    <div><img src="images/20171024_183330.jpg" alt="" /></div>
-                    <div><img src="images/20171205_194334.jpg" alt="" /></div>
-                    <div><img src="images/20180129_162742.jpg" alt="" /></div>
-                    <div><img src="images/20180223_132054.jpg" alt="" /></div>
+                    <div><img class="enlarge-photo" src="images/20171006_122628.jpg" alt="nails" /></div>
+                    <div><img class="enlarge-photo" src="images/20171020_220713.jpg" alt="nails" /></div>
+                    <div><img class="enlarge-photo" src="images/20171024_183330.jpg" alt="nails" /></div>
+                    <div><img class="enlarge-photo" src="images/20171205_194334.jpg" alt="nails" /></div>
+                    <div><img class="enlarge-photo" src="images/20180129_162742.jpg" alt="nails" /></div>
+                    <div><img class="enlarge-photo" src="images/20180223_132054.jpg" alt="nails" /></div>
 
                 </div>
             </div>
@@ -188,18 +188,6 @@
 
 
 
-
-{{-- 
-@include responsive_1200 {
-    
-}
-@include responsive_960 {
-    
-}
-@include responsive_384-767 {
-   
-} 
---}}
 
 
 

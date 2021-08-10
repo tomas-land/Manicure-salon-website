@@ -3,10 +3,10 @@ header {
     background-color: $color1;
     // padding-top: 2rem;
 
-    margin: 2rem auto 0;
+    padding: 2rem 0 0;
 
     @include responsive_384-767 {
-        margin: 1rem auto 0;
+        padding: 1rem 0 0;
     }
 
     .container {

@@ -1,1 +1,2 @@
 1- validation in ServiceController store,update
+2. home page logo animation

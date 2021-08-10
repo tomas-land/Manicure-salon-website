@@ -1,0 +1,121 @@
+#galerija {
+
+    background-color: $color1;
+
+    .photo-holder {
+
+        margin-top: 50px;
+        border-radius: 0px;
+        background: $color1;
+        box-shadow: 12px 12px 24px #562756,
+            -12px -12px 24px #843b84;
+
+
+        .new-photo {
+            position: relative;
+        }
+
+        .gallery-photo-delete {
+            padding: 10px;
+            color: $color-rosybrown;
+            position: absolute;
+            background-color: #6d316d;
+            border-radius: 50%;
+            border: none;
+            right: 19px;
+            bottom: 9px;
+            cursor: pointer;
+
+        }
+
+        .title {
+            width: 80%;
+            margin: auto;
+            padding: 2rem 0 0 0;
+            font-family: $montserrat;
+            font-weight: 100;
+            color: $color-washed-violet;
+            font-size: 50px;
+            @include responsive_384-767 {
+font-size: 30px;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 80%;
+            margin: auto;
+            height: auto;
+            padding: 2rem 0rem;
+
+            .salon-photo {
+                height: 100%;
+                width: 32%;
+
+                @include responsive_384-767 {
+
+                width: 100%;
+                margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .new-photo {
+            height: 20vw;
+            width: 49%;
+            margin-bottom: 2rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: inset 0 0 9px 3px #6d316d;
+
+            @include responsive_384-767 {
+                width: 100%;
+                height: 22vh;
+            }
+        }
+    }
+
+
+
+
+    .btn-holder {
+        display: flex;
+        width: 50%;
+        margin: auto;
+
+        .btn-add-photo {
+            border-radius: 8px;
+            display: block;
+            width: 47%;
+            margin: auto;
+            border: 1px solid $color-washed-violet;
+            padding: 1.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: $color-washed-violet;
+            font-family: $montserrat;
+            text-decoration: none;
+            font-size: 20px;
+            background: transparent;
+            cursor: pointer;
+
+            span {
+                color: $color-washed-violet;
+                font-family: $montserrat;
+            }
+
+            .check {
+                display: none;
+                color: rgb(33, 175, 33);
+                font-weight: 900;
+                font-size: 20px;
+                margin-left: 27px;
+            }
+        }
+
+
+    }
+}
