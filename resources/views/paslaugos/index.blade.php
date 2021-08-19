@@ -2,12 +2,13 @@
 @section('content')
     <div id="paslaugos">
 
-        <section class="top">
-            <img class="background_orchid" src="" alt="">
+        <div class="top">
+            <div class="background_orchid" >
             <div class="overlay">
                 <div class="title">Paslaugos</div>
             </div>
-        </section>
+        </div>
+        </div>
 
         <section id="pricelist">
             <div class="container">
@@ -21,7 +22,8 @@
                             <tr>
                                 <td><span>{{ $service->name }}</span></td>
                                 <td class="td-align-center"><span>{{ $service->price }}</span></td>
-                                <td class="td-align-start"><i class="fas fa-euro-sign"></i></td> @auth
+                                <td class="td-align-start"><i class="fas fa-euro-sign"></i></td> 
+                                @auth
                                     <td> <a class="btn-edit " href={{ route('paslaugos.edit', $service->id) }}><i
                                                 class="fas fa-edit red"></i></a></td>
 

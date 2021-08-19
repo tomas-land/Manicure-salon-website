@@ -76,31 +76,31 @@
             </svg>
             <div class="container">
                 <div class="title">Paslaugos</div>
-                <a href="">
+                <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img1"></div>
                         <div class="card_text">Manikiuras </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img2"></div>
                         <div class="card_text">Pedikiuras </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img3"></div>
                         <div class="card_text">Pilingas </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img4"></div>
                         <div class="card_text">Antakiai </div>
                     </div>
                 </a>
-                <a href="">
+                <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img5"></div>
                         <div class="card_text">Depiliacija </div>

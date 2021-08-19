@@ -1,0 +1,138 @@
+#dashboard {
+
+    display: flex;
+
+    .sidebar {
+
+
+        width: 15%;
+        min-height: 100vh;
+        background-color: $color1-dark;
+        transition: 1s;
+
+        .menu {
+
+            margin-top: 30px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .hide-menu {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin-bottom: 40px;
+
+                .material-icons {
+                    color: $color-washed-violet;
+                    cursor: pointer;
+                    margin-right: 1rem;
+                    text-decoration: none;
+                    transition: 1s;
+                }
+            }
+
+            .logout-btn {
+                .material-icons {
+                    padding: 0 2rem 2rem;
+                    font-weight: 100;
+                    font-size: 20px;
+                    color: $color-washed-violet;
+
+                }
+
+            }
+
+            .sidebar-link {
+               
+                width: 100%;
+                margin: 1.5rem;
+                
+                text-decoration: none;
+                font-family: $montserrat;
+                font-weight: 300;
+                font-size: 25px;
+                color: $color-rosybrown;
+                display: flex;
+                align-items: center;
+                border-top: 1px #5a255a solid;
+
+
+                &:last-of-type {
+                    border-bottom: 1px #5a255a solid;
+
+                }
+
+                &:hover {
+                    background-color: #460446;
+                }
+
+                .material-icons {
+
+                    font-weight: 100;
+                    font-size: 24px;
+                    color: $color-rosybrown;
+                    margin-right: 0.5rem;
+                    transition: 1s;
+                }
+
+                .sidebar-link-move {
+                    margin-right: 22px;
+                }
+            }
+
+
+        }
+
+        .logo {
+            margin: 4rem auto;
+            width: 90%;
+            transition: 1s;
+
+            img {
+                width: 100%;
+
+            }
+        }
+
+        .logo-opacity {
+            opacity: 0;
+        }
+
+    }
+
+    .sidebar-closed {
+
+
+        width: 70px;
+    }
+
+    .content {
+        width: 100%;
+        background-color: #823d82;
+
+
+        .admin-top {
+            .background_orchid {
+                background-position-y: -467px;
+            }
+        }
+
+        .login {
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            a {
+
+                align-items: center;
+                margin-right: 1rem;
+                font-family: Nunito;
+                color: $color-washed-violet;
+                text-decoration: none;
+            }
+
+        }
+    }
+}

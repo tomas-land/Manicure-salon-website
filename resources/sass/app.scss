@@ -29,6 +29,7 @@
 @import 'layout/_footer.scss';
 @import 'layout/_crud_layout.scss';
 @import 'layout/_page_top.scss';
+@import 'layout/_dashboard.scss';
 
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
@@ -37,6 +38,11 @@
 @import 'pages/_home.scss';
 @import 'pages/_paslaugos.scss';
 @import 'pages/_galerija.scss';
+
+// ADMIN
+@import 'admin/_clients.scss';
+@import 'admin/_visits.scss';
+@import 'admin/_calendar.scss';
 
 * {
 	box-sizing: border-box;
@@ -87,6 +93,7 @@ a{
 	opacity: 0;
 	visibility: hidden;
 	z-index: 1000;
+	text-decoration: none;
   }
   #button-to-top::after {
 	content: "\f077";

@@ -2,12 +2,13 @@
 @section('content')
     <div id="galerija">
 
-        <section class="top">
-            <img class="background_orchid" src="" alt="">
+        <div class="top">
+            <div class="background_orchid" >
             <div class="overlay">
                 <div class="title">Galerija</div>
             </div>
-        </section>
+        </div>
+        </div>
 
         <section class="photo-holder salon">
             <div class="title">Salonas</div>

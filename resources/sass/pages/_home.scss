@@ -316,6 +316,9 @@
 
                     @include responsive_384-767 {
                         border-radius: 10px;
+                        width: 60%;
+                        margin: 1rem auto;
+                        height: 12vw;
                     }
 
                     .card_image {
@@ -331,6 +334,7 @@
 
                         @include responsive_384-767 {
                             border-radius: 10px 0px 0px 10px;
+                            width: 23vw;
                         }
                     }
 
@@ -367,6 +371,7 @@
 
                         @include responsive_384-767 {
                             padding: 12px 0px 0px 12px;
+                            font-size: 5vw;
 
                         }
                     }

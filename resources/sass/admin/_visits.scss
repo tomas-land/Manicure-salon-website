@@ -1,0 +1,143 @@
+#visits {
+
+    .card {
+        padding: 2rem;
+        width: 80%;
+        height: auto;
+        margin: 4rem auto;
+        background-color: #964d96;
+        border-radius: 10px;
+        box-shadow: 5px 5px 30px 5px #4a214a;
+
+        .title {
+            font-size: 25px;
+            font-family: $montserrat;
+            font-weight: 400;
+            color: #2b062b;
+            padding: 0 0 2rem;
+        }
+
+        .inputs {
+            display: flex;
+            flex-wrap: wrap;
+
+            input {
+                margin-bottom: 1rem;
+                width: 100%;
+                padding: 0.5rem;
+                margin-top: 0.5rem;
+                border-radius: 6px;
+                border: none;
+                background-color: #e2b9e2;
+                color: $color1;
+            }
+
+            select {
+                width: 100%;
+                padding: 0.5rem;
+                margin-top: 1rem;
+                border-radius: 6px;
+                border: none;
+                background-color: #e2b9e2;
+                color: #877575;
+               .option-disabled{
+                   color: $color1;
+               }
+            }
+        }
+
+        .add-btn {
+            display: block;
+            width: 25%;
+            border: 1px solid #460446;
+            border-radius: 6px;
+            padding: 0.5rem;
+            text-decoration: none;
+            text-align: center;
+            font-family: $montserrat;
+            color: #736060;
+
+            &:hover {
+                background-color: $color1;
+                color: $color-washed-violet;
+                border-color: $color-washed-violet;
+            }
+        }
+
+        .btn-submit {
+            display: block;
+            width: 25%;
+            border: 1px solid #460446;
+            border-radius: 6px;
+            padding: 0.5rem;
+            text-align: center;
+            font-family: $montserrat;
+            color: #4d064d;
+            margin-top: 0.5rem;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color1;
+                color: $color-washed-violet;
+                border-color: $color-washed-violet;
+            }
+        }
+
+        .btn-edit {
+            color: $color-rosybrown;
+            margin-left: 2rem;
+
+
+        }
+
+        .btn-delete {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            color: $color-rosybrown;
+
+
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 2rem;
+            border-collapse: collapse;
+
+            tr {
+                border-bottom: 1px solid #6d316d;
+
+                &:first-of-type {
+                    border-bottom: 2px solid #562756;
+                }
+
+            }
+
+            th {
+                padding: 1rem;
+                text-align: left;
+                width: 33.33%;
+                font-size: 25px;
+                font-family: $montserrat;
+                font-weight: 400;
+                color: #2b062b;
+
+                // &:nth-child(3) {
+                //     width: 20%;
+                // }
+            }
+
+            td {
+                color: $color-washed-violet;
+                padding: 1rem;
+                font-size: 18px;
+                font-family: $montserrat;
+
+
+            }
+        }
+    }
+
+}
