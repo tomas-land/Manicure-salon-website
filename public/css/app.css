@@ -7837,7 +7837,7 @@ footer .container .column__contact h4 {
   text-align: right;
   font-weight: 100;
   color: #c39fd3;
-  font-size: 4vw;
+  font-size: 80px;
 }
 @media (max-width: 700px) {
   .top .overlay .title {
@@ -7851,7 +7851,7 @@ footer .container .column__contact h4 {
   display: flex;
 }
 #dashboard .sidebar {
-  width: 15%;
+  width: 20%;
   min-height: 100vh;
   background-color: #4d064d;
   transition: 1s;
@@ -7874,6 +7874,9 @@ footer .container .column__contact h4 {
   text-decoration: none;
   transition: 1s;
 }
+#dashboard .sidebar .menu .hide-menu .arrow-rotate {
+  transform: rotate(180deg);
+}
 #dashboard .sidebar .menu .logout-btn .material-icons {
   padding: 0 2rem 2rem;
   font-weight: 100;
@@ -7882,7 +7885,7 @@ footer .container .column__contact h4 {
 }
 #dashboard .sidebar .menu .sidebar-link {
   width: 100%;
-  margin: 1.5rem;
+  padding: 1.5rem 0 1.5rem 1.5rem;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -7925,6 +7928,9 @@ footer .container .column__contact h4 {
 #dashboard .content {
   width: 100%;
   background-color: #823d82;
+}
+#dashboard .content .admin-top .title {
+  width: 92%;
 }
 #dashboard .content .admin-top .background_orchid {
   background-position-y: -467px;
@@ -8194,8 +8200,9 @@ footer .container .column__contact h4 {
   width: 70%;
   margin: auto;
   font-family: "Montserrat", sans-serif;
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 300;
+  margin-bottom: 6rem;
   color: #c39fd3;
 }
 #home #paslaugos_home .container a {
@@ -8318,7 +8325,7 @@ footer .container .column__contact h4 {
 }
 #home #galerija_home .container .title {
   font-family: "Montserrat", sans-serif;
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 300;
   color: #c39fd3;
   width: 70%;
@@ -8358,7 +8365,7 @@ footer .container .column__contact h4 {
 #home #kontaktai_home .background_orchid .overlay .title {
   display: flex;
   font-family: "Montserrat", sans-serif;
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: 300;
   color: #c39fd3;
   width: 70%;
@@ -8490,7 +8497,7 @@ footer .container .column__contact h4 {
   background-color: #6d316d;
 }
 #paslaugos #pricelist {
-  width: 80%;
+  width: 65%;
   margin: auto;
 }
 @media (max-width: 700px) {
@@ -8519,7 +8526,7 @@ footer .container .column__contact h4 {
 }
 #paslaugos #pricelist .container .image {
   height: auto;
-  width: 50%;
+  width: 40%;
   background-image: url("/images/shutterstock_793330702.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -8906,7 +8913,8 @@ footer .container .column__contact h4 {
 #visits .card .inputs select {
   width: 100%;
   padding: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   border-radius: 6px;
   border: none;
   background-color: #e2b9e2;
@@ -8924,7 +8932,7 @@ footer .container .column__contact h4 {
   text-decoration: none;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  color: #736060;
+  color: #c29ac2;
 }
 #visits .card .add-btn:hover {
   background-color: #6d316d;
@@ -8979,6 +8987,21 @@ footer .container .column__contact h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #2b062b;
+}
+#visits .card table th:nth-child(1) {
+  width: 7%;
+}
+#visits .card table th:nth-child(2) {
+  width: 15%;
+}
+#visits .card table th:nth-child(3) {
+  width: 15%;
+}
+#visits .card table th:nth-child(4) {
+  width: 15%;
+}
+#visits .card table th:nth-child(5) {
+  width: 48%;
 }
 #visits .card table td {
   color: #c39fd3;
@@ -9038,16 +9061,67 @@ footer .container .column__contact h4 {
   color: #c39fd3;
 }
 
-#modal .modal-content .modal-header {
-  border-bottom: none;
+#mymodal .modal-content {
+  padding: 2rem;
+  width: 100%;
+  height: auto;
+  background-color: #964d96;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px 5px #4a214a;
 }
-#modal .modal-content .modal-body {
+#mymodal .modal-content .modal-header {
+  border-bottom: none;
+  padding: 0rem 1rem;
+  display: flex;
+}
+#mymodal .modal-content .modal-header .modal-title {
+  align-items: center;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #2b062b;
+}
+#mymodal .modal-content .modal-body {
   display: flex;
   flex-wrap: wrap;
 }
-#modal .modal-content .modal-body input {
+#mymodal .modal-content .modal-body input {
+  margin-bottom: 1rem;
   width: 100%;
-  margin-bottom: 2rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #e2b9e2;
+  color: #6d316d;
+}
+#mymodal .modal-content .modal-body select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #e2b9e2;
+  color: #6d316d;
+}
+#mymodal .modal-content .modal-body .btn-submit {
+  display: block;
+  width: 25%;
+  border: 1px solid #460446;
+  border-radius: 6px;
+  padding: 0.5rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #4d064d;
+  margin-top: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+#mymodal .modal-content .modal-body .btn-submit:hover {
+  background-color: #6d316d;
+  color: #c39fd3;
+  border-color: #c39fd3;
 }
 
 * {

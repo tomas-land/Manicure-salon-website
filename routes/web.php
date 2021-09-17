@@ -24,7 +24,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
     Route::resource('/admin/clients', App\Http\Controllers\ClientController::class);
     Route::resource('/admin/visits', App\Http\Controllers\VisitController::class);
-    Route::resource('/admin/calendar', App\Http\Controllers\VisitController::class);
+    Route::get('/admin/calendar', [App\Http\Controllers\CalendarController::class, 'index']);
+    Route::post('/admin/calendar/action', [App\Http\Controllers\CalendarController::class, 'action']);
+
+
+    
 
 });
 

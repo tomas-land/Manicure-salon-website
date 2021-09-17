@@ -1,7 +1,7 @@
 @extends('admin.dashboard')
 @section('admin-content')
 
-    <div id="clients">
+    <div id="visits">
         <div class="card">
             <a class="add-btn" href="{{ route('visits.create') }}">Pridėti naują vizitą</a>
             <table>

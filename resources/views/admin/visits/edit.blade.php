@@ -11,8 +11,8 @@
                     <div class="inputs">
 
 
-                        <input type="text" id="datetimepicker-visits-edit-start" placeholder="dd-mm-yyyy" name="start" class="form-control" value="{{$visit->start}}">
-                        <input type="text" id="datetimepicker-visits-edit-end" placeholder="Baigiasi" name="end" class="form-control" value="{{$visit->end}}">
+                        <input type="text"  class="datetimepicker" placeholder="Prasideda" autocomplete="off" name="start" class="form-control" value="{{$visit->start}}">
+                        <input type="text" class="datetimepicker" placeholder="Baigiasi" autocomplete="off" name="end" class="form-control" value="{{$visit->end}}">
                         <input type="text" placeholder="Vardas" name="name" class="form-control" value="{{$visit->name}}">
                         <input type="text" placeholder="Pavardė" class="input" name="surname" class="form-control" value="{{$visit->surname}}">
 
@@ -40,26 +40,5 @@
                 $(this).css('backgroundColor', 'white')
             })
 
-
-            
-
-            $('#datetimepicker-visits-edit-start').datetimepicker({
-                step: 15
-                // allowTimes: [
-                //     '12:00', '13:00', '15:00',
-                //     '17:00', '17:05', '17:20', '19:00', '20:00'
-                // ]
-
-
-            });
-            $('#datetimepicker-visits-edit-end').datetimepicker({
-                step: 15
-                // allowTimes: [
-                //     '12:00', '13:00', '15:00',
-                //     '17:00', '17:05', '17:20', '19:00', '20:00'
-                // ]
-
-
-            });
         </script>
     @endsection

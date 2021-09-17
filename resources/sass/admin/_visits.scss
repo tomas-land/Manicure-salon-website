@@ -35,7 +35,8 @@
             select {
                 width: 100%;
                 padding: 0.5rem;
-                margin-top: 1rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
                 border-radius: 6px;
                 border: none;
                 background-color: #e2b9e2;
@@ -55,7 +56,7 @@
             text-decoration: none;
             text-align: center;
             font-family: $montserrat;
-            color: #736060;
+            color: #c29ac2;
 
             &:hover {
                 background-color: $color1;
@@ -123,10 +124,21 @@
                 font-family: $montserrat;
                 font-weight: 400;
                 color: #2b062b;
-
-                // &:nth-child(3) {
-                //     width: 20%;
-                // }
+                &:nth-child(1) {
+                    width: 7%;
+                 }
+                &:nth-child(2) {
+                   width: 15%;
+                }
+                &:nth-child(3) {
+                   width: 15%;
+                }
+                &:nth-child(4) {
+                   width: 15%;
+                }
+                &:nth-child(5) {
+                   width: 48%;
+                }
             }
 
             td {

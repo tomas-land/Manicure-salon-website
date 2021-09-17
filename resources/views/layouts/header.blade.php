@@ -28,7 +28,8 @@
                 </span>
             </button>
             <div class="login">
-                 <a href="{{ route('admin') }}">ADMIN</a>  
+           
+                
                 @guest
                     @if (Route::has('login'))
 
@@ -40,19 +41,22 @@
 
                     @if (Route::has('register'))
 
-                        <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        {{-- <a class="" href="{{ route('register') }}">{{ __('Register') }}</a> --}}
 
                     @endif
 
                 @else
-
+{{-- 
                     <a>
                         {{ Auth::user()->name }}
+                    </a> --}}
+                    <a href="{{route('admin')}}">
+                        ADMIN 
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            {{ __('LOGOUT') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

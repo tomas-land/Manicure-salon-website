@@ -5,7 +5,7 @@
 
 
     #pricelist {
-        width: 80%;
+        width: 65%;
         margin: auto;
 
         @include responsive_384-767 {
@@ -34,7 +34,7 @@
 
             .image {
                 height: auto;
-                width: 50%;
+                width: 40%;
                 background-image: url("/images/shutterstock_793330702.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;

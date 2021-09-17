@@ -5,7 +5,7 @@
     .sidebar {
 
 
-        width: 15%;
+        width: 20%;
         min-height: 100vh;
         background-color: $color1-dark;
         transition: 1s;
@@ -30,6 +30,9 @@
                     text-decoration: none;
                     transition: 1s;
                 }
+                .arrow-rotate{
+                    transform: rotate(180deg);
+                }
             }
 
             .logout-btn {
@@ -46,8 +49,7 @@
             .sidebar-link {
                
                 width: 100%;
-                margin: 1.5rem;
-                
+                padding: 1.5rem 0 1.5rem 1.5rem;
                 text-decoration: none;
                 font-family: $montserrat;
                 font-weight: 300;
@@ -113,6 +115,9 @@
 
 
         .admin-top {
+            .title{
+                width:92%;
+            }
             .background_orchid {
                 background-position-y: -467px;
             }

@@ -1,62 +1,54 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Manicure salon website
 
-## About Laravel
+## Description:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Website developed with Laravel framework. 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Home page 
+- Pricing table (prices can be modified by admin) 
+- Photo Gallery (photos can be added or deleted by admin)  
+- Contacts 
+- Responsive design 
+- Mobile-Friendly 
+- SEO 
+- Authentication 
 
-## Learning Laravel
+## Admin dashboard features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-  Create, edit and delete appointment or client data 
+-  Schedule appointments on calendar  
+-  SMS reminder about upcoming appointment 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Launch instructions:
 
-## Laravel Sponsors
+-   If you do not have composer package manager installed on your system, install it (installation instructions [here](https://getcomposer.org/download)).
+-   Clone this repository or download it as a ZIP package.
+-   Open it with Visual Studio Code or your preferred code editor.
+-   Create a new schema(database) in you MySQL server.
+-   Rename **'.env.example'** file to **'.env'** inside of the project's root directory and configure the database information.
+-   Using GitBash, CMD or other terminal in your code editor:
+    -   run if composer is installed locally <pre>php <'path to composer.phar file location'>/composer.phar install</pre>
+    -   run if composer is installed on your system globally  <pre>php composer.phar install</pre>
+-   Run <pre>php artisan key:generate</pre>
+-   Run migrations to create tables<pre>php artisan migrate</pre> 
+-   Fill tables with dummy data <pre>php artisan db:seed</pre>
+-   Follow the link that appears in the terminal after running <pre>php artisan serve</pre>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+## Screenshots
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+![Capture](https://user-images.githubusercontent.com/72792707/133811405-2fb7d690-cd08-464d-9c45-6993abda0471.JPG)
+![Capture2](https://user-images.githubusercontent.com/72792707/133811413-e73a0cc7-9118-4dd2-ad94-e5e3f680235e.JPG)
+![Capture3](https://user-images.githubusercontent.com/72792707/133811416-0dc5c3da-a8de-474e-a0ba-e043ab833e6d.JPG)
+![Capture4](https://user-images.githubusercontent.com/72792707/133811419-0897cf40-c82b-4727-82ce-f4e7227cbf00.JPG)
+![Capture5](https://user-images.githubusercontent.com/72792707/133811426-f5e5a95c-b5d7-4eff-ac52-d301652d3007.JPG)
+![Capture6](https://user-images.githubusercontent.com/72792707/133811430-eed1f300-d5c2-4675-b1fa-29568480f160.JPG)
+![Capture7](https://user-images.githubusercontent.com/72792707/133811436-154b13a1-58ee-4fe3-b362-9d032e45cdb6.JPG)
+![u6u](https://user-images.githubusercontent.com/72792707/133812828-a50ff624-3a40-4f7f-8d70-b8ae262e9dca.JPG)
 
-## Contributing
+## Author:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[Tomas L.](https://github.com/tomas-land)

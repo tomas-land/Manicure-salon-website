@@ -1,6 +1,6 @@
-1- validation in ServiceController store,update
+1. validation in ServiceController store,update
 2. home page logo animation
-3. add icon top bar in the head
-4. when upload select multi
+3. add icon top bar in the header as link to homepage
+4. when upload select multiple images
 5. blade alerts message
-6 sweet alert
+6. sweet alert

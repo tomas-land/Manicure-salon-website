@@ -9,20 +9,21 @@
                     @csrf
 
                     <div class="inputs">
-
-
-                        <input type="datetime-local" placeholder="dd-mm-yyyy" name="start" class="form-control" value="">
-                        <input type="datetime-local" placeholder="Baigiasi" name="end" class="form-control" value="">
                         <input type="text" placeholder="Vardas" name="name" class="form-control" value="">
                         <input type="text" placeholder="Pavardė" class="input" name="surname" class="form-control" value="">
-
-                        <select  name="service" id="" class="select">
-                            <option  value="" selected disabled>Paslauga</option>
+                        <input type="text" class="datetimepicker" placeholder="Prasideda" autocomplete="off" name="start"
+                            class="form-control" value="">
+                        <input type="text" class="datetimepicker" placeholder="Baigiasi" autocomplete="off" name="end"
+                            class="form-control" value="">
+                        <select name="service" id="" class="select">
+                            <option value="" selected disabled>Paslauga</option>
                             @foreach ($sub_services as $service)
                                 <option class="option-disabled">{{ $service->name }}</option>
 
                             @endforeach
                         </select>
+                        <input type="text" placeholder="Kaina" class="input" name="price" class="form-control" value="">
+
                     </div>
                     <button type="submit" class="btn-submit">Išsaugoti</button>
                 </form>
