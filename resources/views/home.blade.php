@@ -42,8 +42,8 @@
 
         <section id="mokymai_home">
 
- {{-- poster="images/20171006_122628.jpg" --}}
-            <video  autoplay loop>
+            {{-- poster="images/20171006_122628.jpg" --}}
+            <video autoplay loop autobuffer muted playsinline>
                 <source src="{{ asset('video/1.mp4') }}" type="video/mp4">
                 <source src="movie.ogg" type="video/ogg">
                 Your browser does not support the video tag.
@@ -57,16 +57,15 @@
                         accusantium magni ut loremdistinctio amet doloremque sit vero, ipsa facere possimus vel fugiat
                         assumenda
                         dolores maiores aspernatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur iste
-                        dolor sint recusandae ipsa vitae porro quia fugiat, quaerat nihil deserunt harum magni impedit
+                        dolor sint recusandae ipsa vitae porro quia fugiat,
                         mollitia maiores, corporis blanditiis voluptates illum. Libero maiores incidunt quasi animi ab
-                        ducimus repellat iusto porro
+                        repellat iusto porro
                         repellendus!</p>
                     <a class="btn-grad" href="www.google.lt">Registruotis</a>
                 </div>
 
             </div>
         </section>
-
 
         <section id="paslaugos_home">
             <svg class="wave_top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -79,31 +78,68 @@
                 <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img1"></div>
-                        <div class="card_text">Manikiuras </div>
+                        <div class="card_text">
+                            <div class="text">Manikiūras</div>
+
+                            <div class="arrows">
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                            </div>
+                        </div>
                     </div>
                 </a>
                 <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img2"></div>
-                        <div class="card_text">Pedikiuras </div>
+                        <div class="card_text">
+                            <div class="text">Pedikiuras</div>
+                            <div class="arrows">
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                            </div>
+                        </div>
                     </div>
                 </a>
                 <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img3"></div>
-                        <div class="card_text">Pilingas </div>
+                        <div class="card_text">
+                            <div class="text">Pilingas</div>
+                            <div class="arrows">
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                            </div>
+
+                        </div>
                     </div>
                 </a>
                 <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img4"></div>
-                        <div class="card_text">Antakiai </div>
+                        <div class="card_text">
+                            <div class="text">Antakiai</div>
+                            <div class="arrows">
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                            </div>
+                        </div>
                     </div>
                 </a>
                 <a href="{{ route('paslaugos.index') }}">
                     <div class="card">
                         <div class="card_image img5"></div>
-                        <div class="card_text">Depiliacija </div>
+                        <div class="card_text">
+                            <div class="text">Depiliacija</div>
+                            <div class="arrows">
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                                <div class="scroll-arrow"></div>
+                            </div>
+                        </div>
                     </div>
                 </a>
             </div>
@@ -151,18 +187,19 @@
                                 +370 67532865
                             </div>
                             <div class="icon-box">
-                                <div class="round_frame"><i class="fas fa-hourglass"></i></i></div>
+                                <div class="round_frame"><i class="fas fa-hourglass"></i></div>
                                 Darbo laikas I-V 10-17 val
                             </div>
                         </div>
                         <div class="contact_form">
                             <form action="">
-                                
+
                                 <input type="text" id="fname" name="fname" placeholder="Vardas"><br>
-                                
+
                                 <input type="text" id="lname" name="lname" placeholder="El. pašto adresas"><br><br>
-                                <textarea rows="3" cols="50" name="" id="" cols="30" rows="10" placeholder="Žinutė"></textarea>
-                                <button type="submit" >Siūsti</button> 
+                                <textarea rows="3" cols="50" name="" id="" cols="30" rows="10"
+                                    placeholder="Žinutė"></textarea>
+                                <button type="submit">Siūsti</button>
                             </form>
 
                         </div>
@@ -192,5 +229,3 @@
 
 
 @endsection
-
-

@@ -10,7 +10,7 @@ header {
     }
 
     .container {
-        
+
         display: flex;
         max-width: 100%;
         flex-wrap: wrap;
@@ -37,11 +37,12 @@ header {
         }
 
         .socmedia {
-
+            position: relative;
+            z-index: 99999999;
             width: 70%;
             display: flex;
             justify-content: flex-start;
-            padding-left: 4rem;
+            padding-left: 5rem;
 
             @include responsive_384-767 {
                 transform: translateY(1rem);
@@ -53,6 +54,8 @@ header {
                 height: 2.5rem;
                 fill: $color-rosybrown;
                 margin-right: 1.5rem;
+
+
             }
         }
 
@@ -66,15 +69,18 @@ header {
 
                 align-items: center;
                 margin-right: 1rem;
-                font-family: Nunito;       
+                font-family: Nunito;
                 color: $color-rosybrown;
                 text-decoration: none;
 
 
             }
-.material-icons{
-    font-size: 40px;
-}
+
+            .material-icons {
+                font-size: 40px;
+                margin-right: 5rem;
+            }
+
             @include responsive_384-767 {
                 display: none;
             }
@@ -90,6 +96,7 @@ header {
                 width: 30%;
                 transform: translateY(1rem);
             }
+
         }
 
 
@@ -141,50 +148,52 @@ header {
     }
 
     .slide_menu {
-        
-       display: none;
 
-       @include responsive_384-767 {
-        position: absolute;
-        z-index: 99;
-        top: 10%;
-        right: 100%;
-        height: auto;
-        width: 100%;
-        margin: 0;
-        background-color: $color1;
-        color: $color-rosybrown;
-        text-align: center;
+        display: none;
 
-        display: block;
-        transition: 0.4s;
-        
-        ul {
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-
-            list-style-type: none;
-            &:hover {
-                background-color: #572157;
-            }
-        }
-
-        a {
+        @include responsive_384-767 {
+            position: absolute;
+            z-index: 99;
+            top: 9%;
+            right: 100%;
+            height: auto;
             width: 100%;
+            margin: 0;
+            background-color: $color1;
+            color: $color-rosybrown;
+            text-align: center;
+
             display: block;
-            text-decoration: none;
-            color: darksalmon;
-            font-family: $montserrat;
-            padding: 1.5rem;
-            border-top: 1px solid #572157;
+            transition: 0.4s;
+
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+
+                list-style-type: none;
+
+                &:hover {
+                    background-color: #572157;
+                }
+            }
+
+            a {
+                width: 100%;
+                display: block;
+                text-decoration: none;
+                color: darksalmon;
+                font-family: $montserrat;
+                padding: 1.5rem;
+                border-top: 1px solid #572157;
+
+            }
 
         }
-       
     }
-    }
+
     .is-active {
         right: 0%;
 
