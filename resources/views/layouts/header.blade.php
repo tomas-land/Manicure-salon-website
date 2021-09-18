@@ -41,7 +41,7 @@
 
                     @if (Route::has('register'))
 
-                        <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        {{-- <a class="" href="{{ route('register') }}">{{ __('Register') }}</a> --}}
 
                     @endif
 
