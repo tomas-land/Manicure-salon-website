@@ -30,7 +30,7 @@ header {
             }
 
             @include responsive_384-767 {
-                height: 7vh;
+                height: 5vh;
                 width: 100vw;
                 transform: translateY(-5px);
             }
@@ -41,17 +41,18 @@ header {
             width: 70%;
             display: flex;
             justify-content: flex-start;
-            padding-left: 2rem;
+            padding-left: 4rem;
 
             @include responsive_384-767 {
                 transform: translateY(1rem);
+                padding-left: 2rem;
             }
 
             svg {
-                width: 2rem;
-                height: 2rem;
-                fill: $color1-dark;
-                margin-right: 0.5rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                fill: $color-rosybrown;
+                margin-right: 1.5rem;
             }
         }
 
@@ -65,13 +66,15 @@ header {
 
                 align-items: center;
                 margin-right: 1rem;
-                font-family: Nunito;
-                color: $color-washed-violet;
+                font-family: Nunito;       
+                color: $color-rosybrown;
                 text-decoration: none;
 
 
             }
-
+.material-icons{
+    font-size: 40px;
+}
             @include responsive_384-767 {
                 display: none;
             }

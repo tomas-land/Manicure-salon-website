@@ -7505,7 +7505,7 @@ header .container .shadow {
 }
 @media (max-width: 700px) {
   header .container .shadow {
-    height: 7vh;
+    height: 5vh;
     width: 100vw;
     transform: translateY(-5px);
   }
@@ -7514,18 +7514,19 @@ header .container .socmedia {
   width: 70%;
   display: flex;
   justify-content: flex-start;
-  padding-left: 2rem;
+  padding-left: 4rem;
 }
 @media (max-width: 700px) {
   header .container .socmedia {
     transform: translateY(1rem);
+    padding-left: 2rem;
   }
 }
 header .container .socmedia svg {
-  width: 2rem;
-  height: 2rem;
-  fill: #4d064d;
-  margin-right: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: #bc8f8f;
+  margin-right: 1.5rem;
 }
 header .container .login {
   width: 30%;
@@ -7537,8 +7538,11 @@ header .container .login a {
   align-items: center;
   margin-right: 1rem;
   font-family: Nunito;
-  color: #c39fd3;
+  color: #bc8f8f;
   text-decoration: none;
+}
+header .container .login .material-icons {
+  font-size: 40px;
 }
 @media (max-width: 700px) {
   header .container .login {
@@ -7680,7 +7684,7 @@ footer .container .column__socmedia_box svg {
   fill: #6d316d;
   width: 40px;
   height: 40px;
-  margin-right: 1rem;
+  margin: 1rem;
 }
 @media (max-width: 700px) {
   footer .container .column__socmedia_box svg {
@@ -7704,12 +7708,13 @@ footer .container .column__contact a {
   font-family: "Jost", sans-serif;
   letter-spacing: 1px;
   font-weight: 300;
+  text-decoration: none;
 }
 footer .container .column__contact h2 {
   margin-top: 1rem;
   padding: 0;
   letter-spacing: 3px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "Jost", sans-serif;
   font-weight: 300;
   padding-bottom: 20px;
@@ -7718,17 +7723,17 @@ footer .container .column__contact h4 {
   font-family: "Jost", sans-serif;
   letter-spacing: 1px;
   font-weight: 300;
+  font-size: 1.2rem;
 }
 
 .crud_layout {
-  min-height: 52.7vh;
   position: relative;
   background-image: url("/images/pexels-brett-sayles-2291811.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: auto;
+  height: 53vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8420,7 +8425,7 @@ footer .container .column__contact h4 {
   display: flex;
   justify-content: center;
   line-height: 1.9;
-  font-size: 17px;
+  font-size: 18px;
 }
 #home #kontaktai_home .background_orchid .overlay .container .contact_form {
   width: 50%;
