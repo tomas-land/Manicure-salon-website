@@ -36,8 +36,9 @@
             font-weight: 100;
             color: $color-washed-violet;
             font-size: 50px;
+
             @include responsive_384-767 {
-font-size: 30px;
+                font-size: 30px;
             }
         }
 
@@ -56,8 +57,8 @@ font-size: 30px;
 
                 @include responsive_384-767 {
 
-                width: 100%;
-                margin-bottom: 1rem;
+                    width: 100%;
+                    margin-bottom: 1rem;
                 }
             }
         }
