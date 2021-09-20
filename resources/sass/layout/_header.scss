@@ -50,8 +50,8 @@ header {
             }
 
             svg {
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 2rem;
+                height: 2rem;
                 fill: $color-rosybrown;
                 margin-right: 1.5rem;
 
@@ -154,7 +154,7 @@ header {
         @include responsive_384-767 {
             position: absolute;
             z-index: 99;
-            top: 9%;
+            top: 10vh;
             right: 100%;
             height: auto;
             width: 100%;
