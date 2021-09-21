@@ -192,7 +192,7 @@
                             </div>
                         </div>
                         <div class="contact_form">
-                            <form action="">
+                            <form action="#">
 
                                 <input type="text" id="fname" name="fname" placeholder="Vardas"><br>
 

@@ -5,23 +5,25 @@
 
 
     #pricelist {
-        width: 65%;
-        margin: auto;
 
-        @include responsive_384-767 {
-            width: 100%;
-        }
 
+    
         .container {
+
+            max-width: 1100px;
             min-height: 317px;
             height: auto;
-            margin: 3rem;
+            margin: 3rem auto;
             border-radius: 50px;
             background: #6d316d;
             box-shadow: -13px 13px 26px #4a214a,
                 13px -13px 26px #904190;
             display: flex;
             justify-content: flex-start;
+
+            @include responsive_1200 {
+                width: 80%;
+            }
 
             @include responsive_384-767 {
                 height: auto;
@@ -44,7 +46,7 @@
 
                 @include responsive_384-767 {
                     width: 100%;
-                    height: 21vh;
+                    height: 25vh;
                     border-radius: 50px 50px 0 0;
                     box-shadow: none;
                     background-position: center;
@@ -58,8 +60,7 @@
                     width: 100%;
                     height: 100%;
                     background: rgb(255, 255, 255);
-                    background: linear-gradient(183deg, rgba(255, 255, 255, 0) 47%, #6d316d 85%);
-                }
+                    background: linear-gradient(184deg, rgba(255, 255, 255, 0) 13%, #6d316d 91%);                }
             }
 
             .list {

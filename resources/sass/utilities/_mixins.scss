@@ -1,33 +1,38 @@
-@mixin responsive_1400{
+@mixin responsive_1700 {
+
     //nuo 0 iki 1265px galios taisykles
-   @media (max-width: 1400px){
-       @content;
-   } 
-}
- @mixin responsive_1200{
-     //nuo 0 iki 1265px galios taisykles
-    @media (max-width: 1200px){
+    @media (max-width: 1700px) {
         @content;
-    } 
+    }
 }
+@mixin responsive_1400 {
 
-@mixin responsive_960{
     //nuo 0 iki 1265px galios taisykles
-   @media (max-width: 960px){
-       @content;
-   } 
+    @media (max-width: 1400px) {
+        @content;
+    }
 }
 
-@mixin responsive_700{
-    //nuo 0 iki 1265px galios taisykles
-   @media (max-width: 700px){
-       @content;
-   } 
+@mixin responsive_1200 {
+    @media (max-width: 1200px) {
+        @content;
+    }
 }
 
+@mixin responsive_960 {
+    @media (max-width: 960px) {
+        @content;
+    }
+}
 
-@mixin responsive_384-767{
-@media  (max-width: 700px) { 
-    @content;
-  }
+@mixin responsive_700 {
+    @media (max-width: 700px) {
+        @content;
+    }
+}
+
+@mixin responsive_384-767 {
+    @media (max-width: 700px) {
+        @content;
+    }
 }
