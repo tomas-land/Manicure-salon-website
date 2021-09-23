@@ -53,6 +53,7 @@
     <script src="js/home_slider.js"></script>
     <script src="js/slide_menu.js"></script>
     <script src="js/jquery.js"></script>
+    <script src="js/file_upload_check.js"></script>
 
     @include('layouts.footer')
 </body>
