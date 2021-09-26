@@ -47,7 +47,7 @@ Website developed with Laravel framework.
 ![Capture5](https://user-images.githubusercontent.com/72792707/133811426-f5e5a95c-b5d7-4eff-ac52-d301652d3007.JPG)
 ![Capture6](https://user-images.githubusercontent.com/72792707/133811430-eed1f300-d5c2-4675-b1fa-29568480f160.JPG)
 ![Capture7](https://user-images.githubusercontent.com/72792707/133811436-154b13a1-58ee-4fe3-b362-9d032e45cdb6.JPG)
-![u6u](https://user-images.githubusercontent.com/72792707/133812828-a50ff624-3a40-4f7f-8d70-b8ae262e9dca.JPG)
+![reverse](https://user-images.githubusercontent.com/72792707/134796177-336bdc6c-4fca-4f2c-87ea-d6b43672b421.JPG)
 
 ## Author:
 
