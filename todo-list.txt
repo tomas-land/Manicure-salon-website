@@ -4,3 +4,4 @@
 4. when upload select multiple images
 5. blade alerts message
 6. sweet alert
+7. enable https redirect

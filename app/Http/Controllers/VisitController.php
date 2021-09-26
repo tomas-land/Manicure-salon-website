@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\SubService;
 use App\Models\Visit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class VisitController extends Controller
 {
@@ -15,10 +17,13 @@ class VisitController extends Controller
      */
     public function index(Request $request)
     {
-       
-           $visits=Visit::all();
-        return view('admin.visits.index',compact('visits'));
       
+
+        $visits = Visit::orderBy('start', 'DESC')->get();
+        return view('admin.visits.index', compact('visits'));
+
+// get all numbers which visit start today
+
     }
 
     /**
@@ -28,8 +33,9 @@ class VisitController extends Controller
      */
     public function create()
     {
-        $sub_services=SubService::all();
-        return view('admin.visits.create',compact('sub_services'));
+        $clients = Client::all();
+        $sub_services = SubService::all();
+        return view('admin.visits.create', compact('sub_services', 'clients'));
     }
 
     /**
@@ -40,17 +46,28 @@ class VisitController extends Controller
      */
     public function store(Request $request)
     {
-            // $this->validate($request, [
+        // $this->validate($request, [
         //     'name' => 'required|unique:authors|max:50',
         //     'surname' => 'required|unique:authors|max:50',
-            
+
         // ]);
+        $client_id = explode("-", $request->input('client_id'));
+// dd($request);
         $visit = new Visit();
-        $visit->fill($request->all());
-   
-    return ($visit->save() !== 1) ?
-    redirect()->route('visits.index')->with('status_success', "Pridėta!") :
-    redirect()->route('visits.index')->with('status_error', "Klaida!");
+        $visit->client_id = $client_id[0];
+        $visit->name = $client_id[1];
+        $visit->start = $request->input('start');
+        $visit->end = $request->input('end');
+        $visit->service = $request->input('service');
+        $visit->price = $request->input('price');
+        $visit->save();
+
+        // $visit = new Visit();
+        // $visit->fill($request->all());
+
+        return ($visit->save() !== 1) ?
+        redirect()->route('visits.index')->with('status_success', "Pridėta!") :
+        redirect()->route('visits.index')->with('status_error', "Klaida!");
     }
 
     /**
@@ -66,39 +83,37 @@ class VisitController extends Controller
     public function action(Request $request)
     {
         dd('ok');
-    	if($request->ajax())
-    	{
-    		if($request->type == 'add')
-    		{
-    			$event = Visit::create([
+        if ($request->ajax()) {
+            if ($request->type == 'add') {
+                $event = Visit::create([
 
-    				'name'		=>	$request->name,
-    				'service'		=>	$request->service,
-    				'start'		=>	$request->start,
-    				'end'		=>	$request->end
-    			]);
+                    'name' => $request->name,
+                    'service' => $request->service,
+                    'start' => $request->start,
+                    'end' => $request->end,
+                ]);
 
-    			return response()->json($event);
-    		}
+                return response()->json($event);
+            }
 
-    		// if($request->type == 'update')
-    		// {
-    		// 	$event = Event::find($request->id)->update([
-    		// 		'title'		=>	$request->title,
-    		// 		'start'		=>	$request->start,
-    		// 		'end'		=>	$request->end
-    		// 	]);
+            // if($request->type == 'update')
+            // {
+            //     $event = Event::find($request->id)->update([
+            //         'title'        =>    $request->title,
+            //         'start'        =>    $request->start,
+            //         'end'        =>    $request->end
+            //     ]);
 
-    		// 	return response()->json($event);
-    		// }
+            //     return response()->json($event);
+            // }
 
-    		// if($request->type == 'delete')
-    		// {
-    		// 	$event = Event::find($request->id)->delete();
+            // if($request->type == 'delete')
+            // {
+            //     $event = Event::find($request->id)->delete();
 
-    		// 	return response()->json($event);
-    		// }
-    	}
+            //     return response()->json($event);
+            // }
+        }
     }
 
     /**
@@ -109,8 +124,8 @@ class VisitController extends Controller
      */
     public function edit(Visit $visit)
     {
-        $sub_services=SubService::all();
-        return view('admin.visits.edit',compact('sub_services','visit'));
+        $sub_services = SubService::all();
+        return view('admin.visits.edit', compact('sub_services', 'visit'));
     }
 
     /**

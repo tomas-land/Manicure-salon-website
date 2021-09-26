@@ -21,8 +21,14 @@
                 </div>
                 <div class="modal-body">
                     <form action="" method="post" id="myform">
-                        <input type="text" placeholder="Vardas" name="name" id="calendar-modal-name" class="form-control" value="">
-                        <input type="text" placeholder="Pavardė" class="input" id="calendar-modal-surname" name="surname" class="form-control" value="">
+                        {{-- <input type="text" placeholder="Vardas" name="name" id="calendar-modal-name" class="form-control" value="">
+                        <input type="text" placeholder="Pavardė" class="input" id="calendar-modal-surname" name="surname" class="form-control" value=""> --}}
+                        <select name="client_id" id="calendar-modal-id" class="form-control">
+                            <option value="" selected disabled>Pasirinkite</option>
+                            @foreach ($clients as $client)
+                                <option value="{{ $client->id }}">{{ $client->name .' '. $client->surname }}</option>
+                            @endforeach
+                        </select>
                         <input type="text" class="datetimepicker" id="calendar-modal-start" placeholder="Prasideda" autocomplete="off" name="start"
                             class="form-control" value="">
                         <input type="text" class="datetimepicker" id="calendar-modal-end" placeholder="Baigiasi" autocomplete="off" name="end"

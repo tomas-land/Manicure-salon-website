@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Visit extends Model
 {
     use HasFactory;
-    public $fillable = ['name','start','end','price','surname','service'];
+    public $fillable = ['start','end','price','name','service','client_id'];
 
+    public function client(){
+        return $this->belongsTo('App\Models\Client');
+        }
 }

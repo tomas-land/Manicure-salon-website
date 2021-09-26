@@ -15,14 +15,13 @@ class CreateVisitsTable extends Migration
     {
         Schema::create('visits', function (Blueprint $table) {
             $table->id();
-            $table->string('service');
-            $table->string('name');
-            $table->string('surname')->nullable();           
+            $table->string('service');           
+            $table->string('name');           
             $table->integer('price')->nullable();           
             $table->dateTime('start');
             $table->dateTime('end');
-            // $table->bigInteger('client_id')->unsigned();
-            // $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+            $table->bigInteger('client_id')->unsigned();
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             $table->timestamps();
         });
     }

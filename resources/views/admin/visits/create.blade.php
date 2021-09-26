@@ -9,8 +9,15 @@
                     @csrf
 
                     <div class="inputs">
-                        <input type="text" placeholder="Vardas" name="name" class="form-control" value="">
-                        <input type="text" placeholder="Pavardė" class="input" name="surname" class="form-control" value="">
+                        {{-- <input type="text" placeholder="Vardas" name="name" class="form-control" value="">
+                        <input type="text" placeholder="Pavardė" class="input" name="surname" class="form-control" value=""> --}}
+                        <select name="client_id" id="" class="form-control">
+                            <option value="" selected disabled>Pasirinkite</option>
+                            @foreach ($clients as $client)
+                                <option name="name" value="{{ $client->id . '-' . $client->name }}">{{ $client->name .' '. $client->surname }}</option>
+                            @endforeach
+                        </select>
+                        
                         <input type="text" class="datetimepicker" placeholder="Prasideda" autocomplete="off" name="start"
                             class="form-control" value="">
                         <input type="text" class="datetimepicker" placeholder="Baigiasi" autocomplete="off" name="end"
