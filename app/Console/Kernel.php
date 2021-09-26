@@ -24,7 +24,16 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('send:SMS')->dailyAt('10:15')->timezone('Europe/Vilnius');
+
+        // $schedule->command('send:SMS')->when(function (){
+        //      Carbon::now();
+        //     // return Carbon::createFromFormat('H:i:s', '10:10:00')->isPast();
+        // });
+        // $schedule->command('send:SMS')->when(function (){
+        //     return Carbon::now();
+        //     // return Carbon::createFromFormat('H:i:s', '10:10:00')->isPast();
+        // });
     }
 
     /**
@@ -34,7 +43,7 @@ class Kernel extends ConsoleKernel
      */
     protected function commands()
     {
-        $this->load(__DIR__.'/Commands');
+        $this->load(__DIR__ . '/Commands');
 
         require base_path('routes/console.php');
     }

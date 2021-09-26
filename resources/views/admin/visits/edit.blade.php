@@ -3,7 +3,7 @@
 
     <div id="visits">
         <div class="card">
-            <div class="title">Pridėkite naują vizitą:</div>
+            <div class="title">Redaguokite vizitą:</div>
             <div class="card-body">
                 <form action="{{ route('visits.update', $visit->id) }}" method="POST">
                     @csrf

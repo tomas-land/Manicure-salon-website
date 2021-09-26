@@ -57,21 +57,27 @@
                     $('#mymodal').modal('show');
                     var start = $.fullCalendar.formatDate(start, 'Y-MM-DD HH:mm:ss');
                     var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
-                    $('#calendar-modal-start').val(start);
-                    $('#calendar-modal-end').val(end);
+                      $('#calendar-modal-start').val(start);
+                        $('#calendar-modal-end').val(end);
                     $('#myform').submit(function(e) {
-                        var name = $('#calendar-modal-name').val();
-                        var surname = $('#calendar-modal-surname').val();
+                      
+                        var client_id = $('#calendar-modal-id').val();
+                        var name = $('#calendar-modal-id option:selected').text();
+                        // var surname = $('#calendar-modal-surname').val();
                         var service = $('#calendar-modal-select').val();
                         var price = $('#calendar-modal-price').val();
+                       var start = $('#calendar-modal-start').val();
+                       var end = $('#calendar-modal-end').val();
+
+console.log(client_id);
 
                         e.preventDefault();
                         $.ajax({
                             url: "calendar/action",
                             type: "POST",
                             data: {
-                                name: name,
-                                surname: surname,
+                                client_id:client_id,
+                                name:name,
                                 service: service,
                                 price: price,
                                 start: start,

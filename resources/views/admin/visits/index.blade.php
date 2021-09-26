@@ -14,11 +14,11 @@
                 </tr>
                 @foreach ($visits as $visit)
                     <tr>
-                        
                         <td>{{ \Carbon\Carbon::parse($visit->start)->format('m-d') }}</td>
-                        <td>{{ \Carbon\Carbon::parse($visit->start)->format('H:i') }} - {{ \Carbon\Carbon::parse($visit->end)->format('H:i') }}</td>
-                        <td>{{ $visit->name }}</td>
-                        <td>{{ $visit->surname }}</td>
+                        <td>{{ \Carbon\Carbon::parse($visit->start)->format('H:i') }} -
+                            {{ \Carbon\Carbon::parse($visit->end)->format('H:i') }}</td>
+                        <td>{{ $visit->client->name }}</td>
+                        <td>{{ $visit->client->surname }}</td>
                         <td>{{ $visit->service }}</td>
                         <td> <a class="btn-edit " href={{ route('visits.edit', $visit->id) }}><i
                                     class="fas fa-edit red"></i></a>
