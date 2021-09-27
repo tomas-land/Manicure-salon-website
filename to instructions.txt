@@ -1,0 +1,13 @@
+// sms-reminder 
+0.instal package with composer
+1.create artisan command in app/console/commands
+2.in handle function create logic
+3.in app/console kernel.php in public function schedule write time logic
+4. to add cron job to hosted server: 1.create script.sh in root folder(
+
+    #!/bin/sh
+    /usr/bin/php /home/u430768004/domains/vb-studija.lt/vb-studija/artisan schedule:run >> /dev/null 2>&1
+)
+4.2 in hosting server cpanel/cron jobs custom field : /bin/sh /home/u430768004/domains/vb-studija.lt/vb-studija/script.sh
+4.3 set time
+4.4 save
