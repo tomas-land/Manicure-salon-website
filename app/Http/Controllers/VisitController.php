@@ -19,7 +19,7 @@ class VisitController extends Controller
     {
       
 
-        $visits = Visit::orderBy('start', 'DESC')->get();
+        $visits = Visit::orderBy('start', 'DESC')->paginate(6);
         return view('admin.visits.index', compact('visits'));
 
 // get all numbers which visit start today

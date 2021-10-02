@@ -1,5 +1,5 @@
 // sms-reminder 
-0.instal package with composer
+0.instal package vonage with composer
 1.create artisan command in app/console/commands
 2.in handle function create logic
 3.in app/console kernel.php in public function schedule write time logic
@@ -11,3 +11,9 @@
 4.2 in hosting server cpanel/cron jobs custom field : /bin/sh /home/u430768004/domains/vb-studija.lt/vb-studija/script.sh
 4.3 set time
 4.4 save
+
+// pagination
+0.create in views pagination.blade.php
+1.php artisan vendor:publish  in terminal and select 16
+2.copy paste content from views/vendor
+extra:resource/language/pagination.php 

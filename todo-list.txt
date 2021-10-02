@@ -1,7 +1,12 @@
 1. validation in ServiceController store,update
 2. home page logo animation
-3. add icon top bar in the header as link to homepage
 4. when upload select multiple images
 5. blade alerts message
 6. sweet alert
 7. enable https redirect
+8. google authentication
+9. roles guest admin
+10. pagination visits
+11. search in visits
+12. password recover
+13. visits ajax

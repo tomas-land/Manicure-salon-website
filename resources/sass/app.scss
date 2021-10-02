@@ -4,7 +4,6 @@
 @import 'utilities/_mixins.scss';
 @import 'utilities/_variables.scss';
 @import 'utilities/_hamburgers.scss';
-// @import 'utilities/_slick-theme.scss';
 
 
 // Fonts
@@ -16,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&display=swap');// Variables
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&display=swap'); // Variables
 
 // Font-Awesome
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
@@ -30,6 +29,7 @@
 @import 'layout/_crud_layout.scss';
 @import 'layout/_page_top.scss';
 @import 'layout/_dashboard.scss';
+@import 'layout/_pagination.scss';
 
 // Bootstrap
 // @import '~bootstrap/scss/bootstrap';
@@ -45,95 +45,93 @@
 @import 'admin/_calendar.scss';
 
 * {
-	box-sizing: border-box;
-	font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
+
 body {
-	
-	// background-image: url("/images/500_F_184828173_Rwp6o2NmmPLID6eFSPMmIFZeBqD2XTCo.jpg");
-	// background-size: 50%;
-	// background-position: 45deg;
-	// background-repeat: repeat;
-	
-	// .wrapper{
-	background-color: $color1;
-	
-	}
+    background-color: $color1;
+}
 
 // remove blue highlihts after click
+
 button,
 textarea,
 input,
 select,
-a{
- -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
- -webkit-tap-highlight-color: transparent;
- -webkit-user-select: none;
- -khtml-user-select: none;
- -moz-user-select: none;
- -ms-user-select: none;
-  user-select: none;
-
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 //Scroll to top button
 
 #button-to-top {
-	display: inline-block;
-	background-color: $color1-dark;
-	width: 50px;
-	height: 50px;
-	text-align: center;
-	border-radius: 50%;
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	transition: background-color .3s, 
-	  opacity .5s, visibility .5s;
-	opacity: 0;
-	visibility: hidden;
-	z-index: 1000;
-	text-decoration: none;
-  }
-  #button-to-top::after {
-	content: "\f077";
-	font-family: FontAwesome;
-	font-weight: normal;
-	font-style: normal;
-	font-size: 1.5em;
-	line-height: 50px;
-	color: #fff;
-  }
-  #button-to-top:hover {
-	cursor: pointer;
-	background-color: $color-rosybrown;
-  }
-  #button-to-top:active {
-	background-color: #555;
-  }
-  #button-to-top.show {
-	opacity: 1;
-	visibility: visible;
-  }
-  
+    display: inline-block;
+    background-color: $color1-dark;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    text-decoration: none;
+}
 
-  #photo-review-modal{
+#button-to-top::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button-to-top:hover {
+    cursor: pointer;
+    background-color: $color-rosybrown;
+}
+
+#button-to-top:active {
+    background-color: #555;
+}
+
+#button-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#photo-review-modal {
     position: fixed;
     background-color: rgb(21 4 21 / 80%);
     width: 100%;
     height: 100%;
     z-index: 99999;
-	display: none;
+    display: none;
 
-	
-	
-	.modal-image{
-width: 60%;
-height: auto;
-display: block;
-margin: auto;
-@include responsive_384-767 {
-width: 100%;
+    .modal-image {
+        width: 60%;
+        height: auto;
+        display: block;
+        margin: auto;
+
+        @include responsive_384-767 {
+            width: 100%;
+        }
+    }
 }
-	}
-}
+
+
