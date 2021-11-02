@@ -41,41 +41,27 @@ class CalendarController extends Controller
                     'start' => $request->start,
                     'end' => $request->end,
                 ]);
-            
-                // dd($request);
-                // $basic = new \Vonage\Client\Credentials\Basic("50ffa6fe", "pYarAQx6YzJSmBoW");
-                // $client = new \Vonage\Client($basic);
-                // $number=37067532865;
-                // $client->sms()->send(
-                //     new \Vonage\SMS\Message\SMS($number, 'VB-nailart studija', 'Laukiame jusu rytoj')
-                // );
-
-                // $message = $response->current();
-
+     
                 return response()->json($event);
-
-                // if ($message->getStatus() == 0) {
-                //     echo "The message was sent successfully\n";
-                // } else {
-                //     echo "The message failed with status: " . $message->getStatus() . "\n";
-                // }
             }
 
-            // if ($request->type == 'update') {
-            //     $event = Visit::find($request->id)->update([
-            //         'title' => $request->title,
-            //         'start' => $request->start,
-            //         'end' => $request->end,
-            //     ]);
+            if ($request->type == 'update') {
+                $event = Visit::find($request->id)->update([
+                    'name' => $request->name,
+                    'service' => $request->service,
+                    'price' => $request->price,
+                    'start' => $request->start,
+                    'end' => $request->end,
+                ]);
+
+                return response()->json($event);
+            }
+
+            // if ($request->type == 'delete') {
+            //     $event = Visit::find($request->id)->delete();
 
             //     return response()->json($event);
             // }
-
-            if ($request->type == 'delete') {
-                $event = Visit::find($request->id)->delete();
-
-                return response()->json($event);
-            }
         }
     }
 }

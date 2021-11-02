@@ -80,42 +80,7 @@ class VisitController extends Controller
     {
         //
     }
-    public function action(Request $request)
-    {
-        dd('ok');
-        if ($request->ajax()) {
-            if ($request->type == 'add') {
-                $event = Visit::create([
-
-                    'name' => $request->name,
-                    'service' => $request->service,
-                    'start' => $request->start,
-                    'end' => $request->end,
-                ]);
-
-                return response()->json($event);
-            }
-
-            // if($request->type == 'update')
-            // {
-            //     $event = Event::find($request->id)->update([
-            //         'title'        =>    $request->title,
-            //         'start'        =>    $request->start,
-            //         'end'        =>    $request->end
-            //     ]);
-
-            //     return response()->json($event);
-            // }
-
-            // if($request->type == 'delete')
-            // {
-            //     $event = Event::find($request->id)->delete();
-
-            //     return response()->json($event);
-            // }
-        }
-    }
-
+   
     /**
      * Show the form for editing the specified resource.
      *
