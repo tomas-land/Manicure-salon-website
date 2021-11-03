@@ -34,7 +34,6 @@ Website developed with Laravel framework.
     -   run if composer is installed on your system globally  <pre>php composer.phar install</pre>
 -   Run <pre>php artisan key:generate</pre>
 -   Run migrations to create tables<pre>php artisan migrate</pre> 
--   Fill tables with dummy data <pre>php artisan db:seed</pre>
 -   Follow the link that appears in the terminal after running <pre>php artisan serve</pre>
 
 
