@@ -162,7 +162,7 @@ $(document).ready(function () {
                     },
                     success: function (response) {
                         calendar.fullCalendar('refetchEvents');
-                        // alert("Event Deleted Successfully");
+                        alert("Vizitas ištrintas sėkmingai");
                     }
                 })
             }

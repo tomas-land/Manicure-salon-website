@@ -57,11 +57,11 @@ class CalendarController extends Controller
                 return response()->json($event);
             }
 
-            // if ($request->type == 'delete') {
-            //     $event = Visit::find($request->id)->delete();
+            if ($request->type == 'delete') {
+                $event = Visit::find($request->id)->delete();
 
-            //     return response()->json($event);
-            // }
+                return response()->json($event);
+            }
         }
     }
 }

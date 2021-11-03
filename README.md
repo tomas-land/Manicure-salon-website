@@ -49,6 +49,12 @@ Website developed with Laravel framework.
 ![Capture7](https://user-images.githubusercontent.com/72792707/133811436-154b13a1-58ee-4fe3-b362-9d032e45cdb6.JPG)
 ![reverse](https://user-images.githubusercontent.com/72792707/134796177-336bdc6c-4fca-4f2c-87ea-d6b43672b421.JPG)
 
+## Preview 1
+https://user-images.githubusercontent.com/72792707/140029035-3601fc96-3050-4794-a228-64043cb38bdd.mp4
+
+## Preview 2
+https://user-images.githubusercontent.com/72792707/140029041-375256d1-d280-4a6f-a197-c3832b4df08c.mp4
+
 ## Author:
 
 [Tomas L.](https://github.com/tomas-land)
