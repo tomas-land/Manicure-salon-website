@@ -26,13 +26,13 @@
                         <select name="client_id" id="calendar-modal-id" class="form-control">
                             <option value="" selected disabled>Pasirinkite</option>
                             @foreach ($clients as $client)
-                                <option value="{{ $client->id }}">{{ $client->name .' '. $client->surname }}</option>
+                                <option value="{{ $client->id }}">{{ $client->name . ' ' . $client->surname }}</option>
                             @endforeach
                         </select>
-                        <input type="text" class="datetimepicker" id="calendar-modal-start" placeholder="Prasideda" autocomplete="off" name="start"
-                            class="form-control" value="">
-                        <input type="text" class="datetimepicker" id="calendar-modal-end" placeholder="Baigiasi" autocomplete="off" name="end"
-                            class="form-control" value="">
+                        <input type="text" class="datetimepicker" id="calendar-modal-start" placeholder="Prasideda"
+                            autocomplete="off" name="start" class="form-control" value="">
+                        <input type="text" class="datetimepicker" id="calendar-modal-end" placeholder="Baigiasi"
+                            autocomplete="off" name="end" class="form-control" value="">
                         <select name="service" id="calendar-modal-select" class="select">
                             <option value="" selected disabled>Paslauga</option>
                             @foreach ($sub_services as $service)
@@ -40,8 +40,13 @@
 
                             @endforeach
                         </select>
-                        <input type="number" placeholder="Kaina" class="input" id="calendar-modal-price" name="price" class="form-control" value="">
-
+                        <input type="number" placeholder="Kaina" class="input" id="calendar-modal-price"
+                            name="price" class="form-control" value="">
+                        @if (Auth::user() && Auth::user()->role == 'admin')
+                            <input type="hidden" id="calendar-modal-role" name="created_by" value="admin">
+                        @else
+                            <input type="hidden" id="calendar-modal-role" name="created_by" value="guest">
+                        @endif
                         <button type="submit" class="btn-submit ">Patvirtinti</button>
                     </form>
                 </div>

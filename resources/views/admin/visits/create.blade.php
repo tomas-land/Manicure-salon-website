@@ -14,10 +14,11 @@
                         <select name="client_id" id="" class="form-control">
                             <option value="" selected disabled>Pasirinkite</option>
                             @foreach ($clients as $client)
-                                <option name="name" value="{{ $client->id . '-' . $client->name }}">{{ $client->name .' '. $client->surname }}</option>
+                                <option name="name" value="{{ $client->id . '-' . $client->name }}">
+                                    {{ $client->name . ' ' . $client->surname }}</option>
                             @endforeach
                         </select>
-                        
+
                         <input type="text" class="datetimepicker" placeholder="Prasideda" autocomplete="off" name="start"
                             class="form-control" value="">
                         <input type="text" class="datetimepicker" placeholder="Baigiasi" autocomplete="off" name="end"
@@ -29,8 +30,13 @@
 
                             @endforeach
                         </select>
-                        <input type="text" placeholder="Kaina" class="input" name="price" class="form-control" value="">
-
+                        <input type="text" placeholder="Kaina" class="input" name="price" class="form-control"
+                            value="">
+                        @if (Auth::user() && Auth::user()->role == 'admin')
+                            <input type="hidden" name="created_by" value="admin">
+                        @else
+                            <input type="hidden" name="created_by" value="guest">
+                        @endif
                     </div>
                     <button type="submit" class="btn-submit">Išsaugoti</button>
                 </form>

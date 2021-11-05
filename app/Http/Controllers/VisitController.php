@@ -6,7 +6,7 @@ use App\Models\Client;
 use App\Models\SubService;
 use App\Models\Visit;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class VisitController extends Controller
 {
@@ -17,12 +17,16 @@ class VisitController extends Controller
      */
     public function index(Request $request)
     {
-      
 
-        $visits = Visit::orderBy('start', 'DESC')->paginate(6);
+        if (Auth::user() && Auth::user()->role == 'admin') {
+
+            $visits = Visit::where('created_by', 'admin')->orderBy('start', 'DESC')->paginate(6);
+        } else {
+            $visits = Visit::where('created_by', 'guest')->orderBy('start', 'DESC')->paginate(6);
+
+        }
+
         return view('admin.visits.index', compact('visits'));
-
-// get all numbers which visit start today
 
     }
 
@@ -33,7 +37,14 @@ class VisitController extends Controller
      */
     public function create()
     {
-        $clients = Client::all();
+        if (Auth::user() && Auth::user()->role == 'admin') {
+
+            $clients = Client::where('created_by', 'admin')->get();
+        } else {
+            $clients = Client::where('created_by', 'guest')->get();
+
+        }
+      
         $sub_services = SubService::all();
         return view('admin.visits.create', compact('sub_services', 'clients'));
     }
@@ -60,6 +71,7 @@ class VisitController extends Controller
         $visit->end = $request->input('end');
         $visit->service = $request->input('service');
         $visit->price = $request->input('price');
+        $visit->created_by = $request->input('created_by');
         $visit->save();
 
         // $visit = new Visit();
@@ -80,7 +92,7 @@ class VisitController extends Controller
     {
         //
     }
-   
+
     /**
      * Show the form for editing the specified resource.
      *
