@@ -50,7 +50,7 @@
                     <a>
                         {{ Auth::user()->name }}
                     </a> --}}
-                    <a href="{{route('admin')}}">
+                    <a href="{{route('clients.index')}}">
                         ADMIN 
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class ClientController extends Controller
 {
     /**
@@ -14,7 +14,13 @@ class ClientController extends Controller
      */
     public function index()
     {
-        $clients = Client::all();
+        
+        if(Auth::user() && Auth::user()->role == 'admin'){
+            $clients = Client::where('created_by', 'admin')->get();
+        } elseif(Auth::user() && Auth::user()->role == 'guest') {
+            $clients = Client::where('created_by','guest')->get();
+        }
+        
         return view('admin.clients.index',['clients'=>$clients]);
     }
 
@@ -41,6 +47,7 @@ class ClientController extends Controller
         //     'surname' => 'required|unique:authors|max:50',
             
         // ]);
+        // dd($request);
         $client = new Client();
         $client->fill($request->all());
    

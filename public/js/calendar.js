@@ -67,7 +67,8 @@ $(document).ready(function () {
                 var price = $('#calendar-modal-price').val();
                 var start = $('#calendar-modal-start').val();
                 var end = $('#calendar-modal-end').val();
-
+                var role = $('#calendar-modal-role').val();
+console.log(role);
                 e.preventDefault();
                 $.ajax({
                     url: "calendar/action",
@@ -79,6 +80,7 @@ $(document).ready(function () {
                         price: price,
                         start: start,
                         end: end,
+                        role: role,
                         type: 'add'
 
                     },
