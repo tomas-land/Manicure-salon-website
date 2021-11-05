@@ -41,7 +41,7 @@ class sendSMS extends Command
     {
 
     
-            $dates = Visit::whereDate('start', Carbon::tomorrow())->get();
+            $dates = Visit::where('created_by','admin')->whereDate('start', Carbon::tomorrow())->get();
             foreach ($dates as $date) {
                 $hours = $date->start;
                 $dt = Carbon::createFromFormat("Y-m-d H:i:s", $hours);

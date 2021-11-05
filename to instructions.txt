@@ -17,3 +17,9 @@
 1.php artisan vendor:publish  in terminal and select 16
 2.copy paste content from views/vendor
 extra:resource/language/pagination.php 
+
+// access to views and actions by ROLE
+1. in view create page , add hidden input with atrribute value='admin/geust' and name='created_by'
+2. after submiting client will be created in database 
+3  in client controller return view with client data fetched from database according who created client 
+*** app/console/commands sendSMS code was changed 
