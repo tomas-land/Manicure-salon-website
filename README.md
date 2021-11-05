@@ -20,7 +20,7 @@ Website developed with Laravel framework.
 
 -  Create, edit and delete appointment or client data 
 -  Schedule appointments on calendar  
--  SMS reminder about upcoming appointment 
+-  SMS-reminder about upcoming appointment 
 
 ## Launch instructions:
 
