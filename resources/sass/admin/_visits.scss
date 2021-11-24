@@ -31,7 +31,9 @@
                 background-color: #e2b9e2;
                 color: $color1;
             }
-
+            input::placeholder{
+                color: #726772;;
+            }
             select {
                 width: 100%;
                 padding: 0.5rem;
@@ -39,10 +41,15 @@
                 margin-bottom: 1rem;
                 border-radius: 6px;
                 border: none;
-                background-color: #e2b9e2;
-                color: #877575;
+                outline: none;
+                background-color: #e2b9e2!important;
+                color: #8b558b;
+
                .option-disabled{
                    color: $color1;
+               }
+               .first-option-color{
+                   color: brown;
                }
             }
         }
@@ -128,7 +135,7 @@
                     width: 7%;
                  }
                 &:nth-child(2) {
-                   width: 15%;
+                   width: 20%;
                 }
                 &:nth-child(3) {
                    width: 15%;

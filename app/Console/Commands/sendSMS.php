@@ -46,7 +46,7 @@ class sendSMS extends Command
                 $hours = $date->start;
                 $dt = Carbon::createFromFormat("Y-m-d H:i:s", $hours);
                 $time = $dt->format('H:i'); 
-                $sms_text = "Sveiki, primename, kad rytoj {$time} laukiame Jūsų VB-nailart studijoje. Iki malonaus! ";
+                $sms_text = "Sveiki, primename, kad rytoj, {$time} , laukiame Jūsų Virmantės Bašinskienės manikiūro studijoje. Iki malonaus susitikimo! ";
 
                 $basic = new \Vonage\Client\Credentials\Basic("50ffa6fe", "pYarAQx6YzJSmBoW");
                 $client = new \Vonage\Client($basic);

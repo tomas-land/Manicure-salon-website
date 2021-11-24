@@ -11,34 +11,24 @@
                     <div class="inputs">
 
 
-                        <input type="text"  class="datetimepicker" placeholder="Prasideda" autocomplete="off" name="start" class="form-control" value="{{$visit->start}}">
-                        <input type="text" class="datetimepicker" placeholder="Baigiasi" autocomplete="off" name="end" class="form-control" value="{{$visit->end}}">
-                        <input type="text" placeholder="Vardas" name="name" class="form-control" value="{{$visit->name}}">
-                        <input type="text" placeholder="Pavardė" class="input" name="surname" class="form-control" value="{{$visit->surname}}">
-
+                        <input type="text" class="datetimepicker" autocomplete="off" name="start" class="form-control"
+                            value="{{ $visit->start }}">
+                        <input type="text" class="datetimepicker" autocomplete="off" name="end" class="form-control"
+                            value="{{ $visit->end }}">
                         <select name="service" id="" class="select">
-                            
-                            @foreach ($sub_services as $service)
-                            <option value="{{ $service->name }}" selected >{{ $service->name }}</option>
-                                {{-- <option class="option-disabled">{{ $service->name }}</option> --}}
 
+
+                            <option value="{{ $visit->service }}" selected>{{ $visit->service }}</option>
+                            @foreach ($sub_services as $service)
+                                <option class="option-disabled">{{ $service->name }}</option>
                             @endforeach
                         </select>
+                        <input type="text" class="input" name="price" class="form-control"
+                            value="{{ $visit->price }}">
                     </div>
                     <button type="submit" class="btn-submit">Išsaugoti</button>
                 </form>
             </div>
         </div>
-        <script>
-            //change select input background and color on change
-            $("select").change(function() {
-                $(this).css('backgroundColor', 'white')
-                $(this).css('color', '#6d316d')
-            })
-            //change input background color on key down
-            $("input").keydown(function() {
-                $(this).css('backgroundColor', 'white')
-            })
 
-        </script>
     @endsection

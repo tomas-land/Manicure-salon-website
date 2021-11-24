@@ -104,9 +104,9 @@
                     </div>
                 </div>
             </div>
-            @if (Auth::user() && Auth::user()->role == 'admin')
-                <h1 class="">REAL ADMIN</h1>
-            @endif
+            {{-- @if (Auth::user() && Auth::user()->role == 'admin')
+                <h6 class="">ADMIN</h6>
+            @endif --}}
 
 
 

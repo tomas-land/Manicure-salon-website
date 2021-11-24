@@ -14,7 +14,7 @@
                     <tr>
                         <td>{{ $client->name }}</td>
                         <td>{{ $client->surname }}</td>
-                        <td>{{ $client->phone }}</td>
+                        <td>+{{ $client->phone }}</td>
                         <td> <a class="btn-edit " href={{ route('clients.edit', $client->id) }}><i
                                     class="fas fa-edit red"></i></a>
                         </td>

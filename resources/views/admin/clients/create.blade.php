@@ -12,7 +12,7 @@
 
                         <input type="text" placeholder="Vardas" name="name" class="form-control" value="">
                         <input type="text" placeholder="Pavardė" name="surname" class="form-control" value="">
-                        <input type="number" placeholder="Tel. nr." name="phone" class="form-control" value="">
+                        <input type="text" placeholder="Tel. nr." name="phone" class="form-control" value="+370">
                         @if (Auth::user() && Auth::user()->role == 'admin')
                             <input type="hidden" name="created_by" value="admin">
                         @else

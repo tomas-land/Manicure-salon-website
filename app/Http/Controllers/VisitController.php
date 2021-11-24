@@ -62,11 +62,13 @@ class VisitController extends Controller
         //     'surname' => 'required|unique:authors|max:50',
 
         // ]);
+       
         $client_id = explode("-", $request->input('client_id'));
-// dd($request);
+
         $visit = new Visit();
         $visit->client_id = $client_id[0];
-        $visit->name = $client_id[1];
+        $visit->name = $client_id[1] . ' ' .$client_id[2];  // client_id[1] = name , [2]= surname
+      
         $visit->start = $request->input('start');
         $visit->end = $request->input('end');
         $visit->service = $request->input('service');

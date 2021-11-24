@@ -114,6 +114,9 @@
                 background-color: #e2b9e2;
                 color: $color1;
             }
+            input::placeholder{
+                color:#6d316d;
+            }
 
             select {
                 width: 100%;

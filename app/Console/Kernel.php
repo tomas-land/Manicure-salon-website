@@ -4,7 +4,7 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
+use Illuminate\Support\Carbon;
 class Kernel extends ConsoleKernel
 {
     /**
@@ -24,8 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('send:SMS')->dailyAt('9:15')->timezone('Europe/Vilnius');
-
+        $schedule->command('send:SMS')->dailyAt('11:00')->timezone('Europe/Vilnius');
+//----------------------------------------------------------------
         // $schedule->command('send:SMS')->when(function (){
         //      Carbon::now();
         //     // return Carbon::createFromFormat('H:i:s', '10:10:00')->isPast();

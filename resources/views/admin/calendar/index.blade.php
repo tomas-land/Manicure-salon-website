@@ -21,10 +21,8 @@
                 </div>
                 <div class="modal-body">
                     <form action="" method="post" id="myform">
-                        {{-- <input type="text" placeholder="Vardas" name="name" id="calendar-modal-name" class="form-control" value="">
-                        <input type="text" placeholder="Pavardė" class="input" id="calendar-modal-surname" name="surname" class="form-control" value=""> --}}
                         <select name="client_id" id="calendar-modal-id" class="form-control">
-                            <option value="" selected disabled>Pasirinkite</option>
+                            <option value="" selected disabled>Pasirinkite klientą ...</option>
                             @foreach ($clients as $client)
                                 <option value="{{ $client->id }}">{{ $client->name . ' ' . $client->surname }}</option>
                             @endforeach
@@ -34,13 +32,12 @@
                         <input type="text" class="datetimepicker" id="calendar-modal-end" placeholder="Baigiasi"
                             autocomplete="off" name="end" class="form-control" value="">
                         <select name="service" id="calendar-modal-select" class="select">
-                            <option value="" selected disabled>Paslauga</option>
+                            <option value="" selected disabled>Pasirinkite paslaugą ...</option>
                             @foreach ($sub_services as $service)
                                 <option class="option-disabled">{{ $service->name }}</option>
-
                             @endforeach
                         </select>
-                        <input type="number" placeholder="Kaina" class="input" id="calendar-modal-price"
+                        <input type="number" placeholder="Įveskite kainą" class="input" id="calendar-modal-price"
                             name="price" class="form-control" value="">
                         @if (Auth::user() && Auth::user()->role == 'admin')
                             <input type="hidden" id="calendar-modal-role" name="created_by" value="admin">

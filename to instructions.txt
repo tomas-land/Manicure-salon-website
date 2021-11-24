@@ -1,4 +1,6 @@
 // sms-reminder 
+php artisan send:SMS <- artisan command to send sms using local server
+setup:
 0.instal package vonage with composer
 1.create artisan command in app/console/commands
 2.in handle function create logic
@@ -23,3 +25,9 @@ extra:resource/language/pagination.php
 2. after submiting client will be created in database 
 3  in client controller return view with client data fetched from database according who created client 
 *** app/console/commands sendSMS code was changed 
+
+
+//css editing
+1.npm run watch
+2.npm run production // at the end of editing
+
