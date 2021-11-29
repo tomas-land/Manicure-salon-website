@@ -1,1 +1,9 @@
 ssh -p 65002 u430768004@45.84.204.103
+Burokelis369
+
+cd domains/vb-studija.lt/vb-studija
+
+
+migrate if changed database
+composer install if added dependencies
+composer dump-autoload
