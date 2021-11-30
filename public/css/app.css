@@ -9290,6 +9290,50 @@ footer .container .column__contact h4 {
   border-color: #c39fd3;
 }
 
+#finance .card {
+  padding: 2rem;
+  width: 85%;
+  height: auto;
+  margin: 4rem auto;
+  background-color: #964d96;
+  border-radius: 10px;
+  box-shadow: 5px 5px 30px 5px #4a214a;
+}
+#finance .card table {
+  width: 100%;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+}
+#finance .card table tr {
+  border-bottom: 1px solid #6d316d;
+}
+#finance .card table tr:first-of-type {
+  border-bottom: 2px solid #562756;
+}
+#finance .card table th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #2b062b;
+}
+#finance .card table th:nth-child(1) {
+  width: 20%;
+}
+#finance .card table th:nth-child(2) {
+  width: 50%;
+}
+#finance .card table th:nth-child(3) {
+  width: 30%;
+}
+#finance .card table td {
+  color: #c39fd3;
+  padding: 1rem;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
