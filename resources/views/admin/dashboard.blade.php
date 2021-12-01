@@ -14,6 +14,7 @@
     <!-- Scripts -->
 
     <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="{{ mix('/chart.js/chart.js') }}"></script>
 
 
     <!-- Styles -->
