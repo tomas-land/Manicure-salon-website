@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/admin/visits', App\Http\Controllers\VisitController::class);
     Route::get('/admin/calendar', [App\Http\Controllers\CalendarController::class, 'index']);
     Route::post('/admin/calendar/action', [App\Http\Controllers\CalendarController::class, 'action']);
+    Route::get('/admin/finance', [App\Http\Controllers\FinanceController::class, 'index'])->name('finance');
 
 
     

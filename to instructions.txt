@@ -1,4 +1,4 @@
-// sms-reminder 
+// SMS-REMINDER
 php artisan send:SMS <- artisan command to send sms using local server
 setup:
 0.instal package vonage with composer
@@ -14,20 +14,37 @@ setup:
 4.3 set time
 4.4 save
 
-// pagination
+// PAGINATION
 0.create in views pagination.blade.php
 1.php artisan vendor:publish  in terminal and select 16
 2.copy paste content from views/vendor
 extra:resource/language/pagination.php 
 
-// access to views and actions by ROLE
+// ACCESS TO VIEWS AND ACTIONS BY ROLE
 1. in view create page , add hidden input with atrribute value='admin/geust' and name='created_by'
 2. after submiting client will be created in database 
 3  in client controller return view with client data fetched from database according who created client 
 *** app/console/commands sendSMS code was changed 
 
 
-//css editing
+// CSS EDITING
 1.npm run watch
-2.npm run production // at the end of editing
+2.npm run production // before pushing to remote repo
+
+//FACTORY
+php artisan make:factory VisitFactory --model=Visit 
+edit definition method and check in tinker : php artisan tinker 
+                                             $visit = App\Models\Visit::factory()->make();
+                                             exit
+edit run method in databaseSeeder.php
+php artisan db:seed                                             
+
+// CHARTS
+composer require consoletvs/charts "6.*" //require laravel charts package
+npm i chart.js@2.7.1  // install chartjs library
+add to webpacl.mix.js : mix.copy('node_modules/chart.js/dist/chart.js', 'public/chart.js/chart.js'); 
+add in the head :     <script src="{{ mix('/chart.js/chart.js') }}"></script>
+php artisan make:chart MonthlyIncomeChart
+in controller : $monthlyIncomeChart = new MonthlyIncomeChart;
+
 

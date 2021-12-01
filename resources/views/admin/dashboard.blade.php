@@ -14,6 +14,7 @@
     <!-- Scripts -->
 
     <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="{{ mix('/chart.js/chart.js') }}"></script>
 
 
     <!-- Styles -->
@@ -84,7 +85,7 @@
                         wysiwyg</span>Vizitai</a>
                 <a href="{{ asset('/admin/calendar') }}" class="sidebar-link"><span
                         class="material-icons icon">today</span>Kalendorius</a>
-                <a href="" class="sidebar-link"><span class="material-icons icon">euro</span>Finansai</a>
+                <a href="{{ route('finance') }}" class="sidebar-link"><span class="material-icons icon">euro</span>Finansai</a>
                 <a href="" class="sidebar-link"><span class="material-icons icon">bar_chart</span>Statistika</a>
                 <a href="{{ asset('home') }}" class="sidebar-link"><span
                         class="material-icons icon">language</span>Svetainė</a>
