@@ -37,8 +37,8 @@ $(document).ready(function () {
 
             element.find('.fc-content').append(event.name);
             element.find('.fc-content').append('<br>' + event.service);
-            element.find('.fc-content').css("background-color", event.color);
-            element.find('.fc-bg').css("background-color", event.color);
+            // element.find('.fc-content').css("background-color", event.color);
+            // element.find('.fc-bg').css("background-color", event.color);
             element.find('.fc-time').css("font-weight", "500");
             jQuery('.fc-prev-button').attr('class', '');
             jQuery('.fc-next-button').attr('class', '');
@@ -73,7 +73,7 @@ $(document).ready(function () {
                 // if ($("input[name='color']").is(':checked')) {
                 //     var color = $('input[name="color"]:checked').val();
                 // }
-var color ='red';
+// var color ='red';
 
                 e.preventDefault();
                 $.ajax({
@@ -87,7 +87,7 @@ var color ='red';
                         start: start,
                         end: end,
                         role: role,
-                        color: color,
+                        // color: color,
                         type: 'add'
 
                     },
