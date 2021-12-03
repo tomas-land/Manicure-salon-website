@@ -39,7 +39,7 @@
                         </select>
                         <input type="text" placeholder="Įveskite kainą" class="input" id="calendar-modal-price"
                             name="price" class="form-control" value="">
-                        <div class="select-color">
+                        {{-- <div class="select-color">
                             <label class="container">
                                 <input type="radio" checked="checked" value="#8f3d92" name="color">
                                 <span class="checkmark" style="background-color: #8f3d92"></span>
@@ -50,14 +50,14 @@
                             </label>
 
                             <label class="container">
-                                <input type="radio" type="radio" value="#4865cd" name="color">
+                                <input type="radio" value="#4865cd" name="color">
                                 <span class="checkmark" style="background-color: #4865cd"></span>
                             </label>
                             <label class="container">
                                 <input type="radio" value="#d7488d" name="color">
                                 <span class="checkmark" style="background-color: #d7488d"></span>
                             </label>
-                        </div>
+                        </div> --}}
                         @if (Auth::user() && Auth::user()->role == 'admin')
                             <input type="hidden" id="calendar-modal-role" name="created_by" value="admin">
                         @else
