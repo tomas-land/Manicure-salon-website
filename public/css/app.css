@@ -9338,6 +9338,11 @@ footer .container .column__contact h4 {
   font-family: "Montserrat", sans-serif;
 }
 
+#statistics .chart {
+  margin: 30px auto 0;
+  width: 85%;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
