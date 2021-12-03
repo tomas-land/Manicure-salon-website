@@ -14,7 +14,7 @@ class AddColorToVisits extends Migration
     public function up()
     {
         Schema::table('visits', function (Blueprint $table) {
-            $table->string('color');
+            $table->string('color')->nullable();
 
         });
     }
