@@ -9263,13 +9263,52 @@ footer .container .column__contact h4 {
 }
 #mymodal .modal-content .modal-body select {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.7rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   border-radius: 6px;
   border: none;
   background-color: #e2b9e2;
   color: #6d316d;
+}
+#mymodal .modal-content .modal-body .select-color {
+  display: flex;
+  padding: 30px;
+}
+#mymodal .modal-content .modal-body .select-color .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#mymodal .modal-content .modal-body .select-color .container:hover input ~ .checkmark {
+  background-color: #460446 !important;
+}
+#mymodal .modal-content .modal-body .select-color .container input {
+  position: absolute;
+  width: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+#mymodal .modal-content .modal-body .select-color .container input:checked ~ .checkmark {
+  border: 1px solid #571a57 !important;
+}
+#mymodal .modal-content .modal-body .select-color .checkmark {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
 }
 #mymodal .modal-content .modal-body .btn-submit {
   display: block;

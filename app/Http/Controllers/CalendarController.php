@@ -17,7 +17,7 @@ class CalendarController extends Controller
             if ($request->ajax()) {
                 $data = Visit::where('created_by', 'admin')->whereDate('start', '>=', $request->start)
                     ->whereDate('end', '<=', $request->end)
-                    ->get(['id', 'start', 'end', 'service', 'price', 'name', 'client_id']);
+                    ->get(['id', 'start', 'end', 'service', 'price', 'name', 'client_id','color']);
                 return response()->json($data);
             }
             $clients = Client::where('created_by', 'admin')->get();
@@ -25,7 +25,7 @@ class CalendarController extends Controller
             if ($request->ajax()) {
                 $data = Visit::where('created_by', 'guest')->whereDate('start', '>=', $request->start)
                     ->whereDate('end', '<=', $request->end)
-                    ->get(['id', 'start', 'end', 'service', 'price', 'name', 'client_id']);
+                    ->get(['id', 'start', 'end', 'service', 'price', 'name', 'client_id','color']);
                 return response()->json($data);
             }
             $clients = Client::where('created_by', 'guest')->get();
@@ -51,6 +51,7 @@ class CalendarController extends Controller
                     'start' => $request->start,
                     'end' => $request->end,
                     'created_by' => $request->role,
+                    'color' => $request->color,
                 ]);
 
                 return response()->json($event);

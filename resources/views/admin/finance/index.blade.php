@@ -54,7 +54,7 @@
                             beginAtZero: true,
                             // ticks: {
                             //     callback: function(value) {
-                            //         return '€ ' + value ;
+                            //         return '€ ' + value ;        // add euro sign to y axis ticks
                             //     }
                             // }
                         }
@@ -98,15 +98,3 @@
     </div>
 @endsection
 
-
-
-
-
-
-{{-- @foreach ($gruodis as $key => $value)
-                    <tr>
-                        <td>{{ $value }}</td>
-                        <td>{{ $key }}</td>
-                       {{-- <td> {{ \Carbon\Carbon::parse($day)->format('Y-m') }}</td> --}}
-{{-- </tr>
-                @endforeach --}}
