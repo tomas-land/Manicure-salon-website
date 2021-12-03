@@ -37,8 +37,27 @@
                                 <option class="option-disabled">{{ $service->name }}</option>
                             @endforeach
                         </select>
-                        <input type="number" placeholder="Įveskite kainą" class="input" id="calendar-modal-price"
+                        <input type="text" placeholder="Įveskite kainą" class="input" id="calendar-modal-price"
                             name="price" class="form-control" value="">
+                        <div class="select-color">
+                            <label class="container">
+                                <input type="radio" checked="checked" value="#8f3d92" name="color">
+                                <span class="checkmark" style="background-color: #8f3d92"></span>
+                            </label>
+                            <label class="container">
+                                <input type="radio" value="#8500ff" name="color">
+                                <span class="checkmark" style="background-color: #8500ff"></span>
+                            </label>
+
+                            <label class="container">
+                                <input type="radio" type="radio" value="#4865cd" name="color">
+                                <span class="checkmark" style="background-color: #4865cd"></span>
+                            </label>
+                            <label class="container">
+                                <input type="radio" value="#d7488d" name="color">
+                                <span class="checkmark" style="background-color: #d7488d"></span>
+                            </label>
+                        </div>
                         @if (Auth::user() && Auth::user()->role == 'admin')
                             <input type="hidden" id="calendar-modal-role" name="created_by" value="admin">
                         @else
@@ -51,7 +70,7 @@
             </div>
         </div>
     </div>
-
+    #871932
 
 
 

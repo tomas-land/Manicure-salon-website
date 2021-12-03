@@ -7,10 +7,7 @@ $('.datetimepicker').datetimepicker({
     // ]
 });
 
-
 $(document).ready(function () {
-
-
 
     $.ajaxSetup({
         headers: {
@@ -40,6 +37,8 @@ $(document).ready(function () {
 
             element.find('.fc-content').append(event.name);
             element.find('.fc-content').append('<br>' + event.service);
+            element.find('.fc-content').css("background-color", event.color);
+            element.find('.fc-bg').css("background-color", event.color);
             element.find('.fc-time').css("font-weight", "500");
             jQuery('.fc-prev-button').attr('class', '');
             jQuery('.fc-next-button').attr('class', '');
@@ -68,7 +67,14 @@ $(document).ready(function () {
                 var start = $('#calendar-modal-start').val();
                 var end = $('#calendar-modal-end').val();
                 var role = $('#calendar-modal-role').val();
-console.log(role);
+                // if($('#calendar-modal-color').is(':checked')){
+                //     var color = $('#calendar-modal-color').val();
+                // }
+                if ($("input[name='color']").is(':checked')) {
+                    var color = $('input[name="color"]:checked').val();
+                }
+
+
                 e.preventDefault();
                 $.ajax({
                     url: "calendar/action",
@@ -81,6 +87,7 @@ console.log(role);
                         start: start,
                         end: end,
                         role: role,
+                        color: color,
                         type: 'add'
 
                     },
@@ -95,17 +102,17 @@ console.log(role);
             })
 
         },
-//---------------------------------------------------------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------------------------
         eventResize: function (event, delta) {
-            
+
             var start = $.fullCalendar.formatDate(event.start, 'Y-MM-DD HH:mm:ss');
             var end = $.fullCalendar.formatDate(event.end, 'Y-MM-DD HH:mm:ss');
             var event_id = event.id;
             var name = event.name;
             var service = event.service;
             var price = event.price;
-           
-            
+
+
             $.ajax({
                 url: "calendar/action",
                 type: "POST",
