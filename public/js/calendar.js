@@ -68,13 +68,14 @@ $(document).ready(function () {
                 var start = $('#calendar-modal-start').val();
                 var end = $('#calendar-modal-end').val();
                 var role = $('#calendar-modal-role').val();
+                var color = $('#calendar-modal-color').val();
                 // if($('#calendar-modal-color').is(':checked')){
                 //     var color = $('#calendar-modal-color').val();
                 // }
                 // if ($("input[name='color']").is(':checked')) {
                 //     var color = $('input[name="color"]:checked').val();
                 // }
-var color ='red';
+// var color ='red';
 
                 e.preventDefault();
                 $.ajax({
