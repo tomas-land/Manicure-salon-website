@@ -53,7 +53,7 @@ class CalendarController extends Controller
                     'created_by' => $request->role,
                     'color' => $request->color
                 ]);
-
+               
                 return response()->json($event);
             }
 

@@ -76,7 +76,7 @@ $(document).ready(function () {
                 //     var color = $('input[name="color"]:checked').val();
                 // }
 // var color ='red';
-
+console.log(color);
                 e.preventDefault();
                 $.ajax({
                     url: "calendar/action",
