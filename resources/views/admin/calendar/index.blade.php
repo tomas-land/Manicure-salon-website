@@ -39,8 +39,6 @@
                         </select>
                         <input type="text" placeholder="Įveskite kainą" class="input" id="calendar-modal-price"
                             name="price" class="form-control" value="">
-                        <input type="text" placeholder="spalva" class="input" id="calendar-modal-color"
-                            name="color" class="form-control" value="red">
                         <div class="select-color">
                             <label class="container">
                                 <input type="radio" checked="checked" value="#8f3d92" name="color">
