@@ -47,4 +47,5 @@ add in the head :     <script src="{{ mix('/chart.js/chart.js') }}"></script>
 php artisan make:chart MonthlyIncomeChart
 in controller : $monthlyIncomeChart = new MonthlyIncomeChart;
 
-
+// Js not changing
+if not changing js in webbrowser clear browser cache : ctrl+f5
