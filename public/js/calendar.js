@@ -38,8 +38,8 @@ $(document).ready(function () {
             element.find('.fc-content').append(event.name);
             element.find('.fc-content').append('<br>' + event.service);
             element.find('.fc-content').append('<br>' + event.color);
-            // element.find('.fc-content').css("background-color", event.color);
-            // element.find('.fc-bg').css("background-color", event.color);
+            element.find('.fc-content').css("background-color", event.color);
+            element.find('.fc-bg').css("background-color", event.color);
             element.find('.fc-time').css("font-weight", "500");
             jQuery('.fc-prev-button').attr('class', '');
             jQuery('.fc-next-button').attr('class', '');
