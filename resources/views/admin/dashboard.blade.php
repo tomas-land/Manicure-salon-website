@@ -15,6 +15,7 @@
 
     <script src="{{ mix('/js/app.js') }}"></script>
     <script src="{{ mix('/chart.js/chart.js') }}"></script>
+    <script src="{{ mix('/js/calendar/calendar.js') }}"></script>
 
 
     <!-- Styles -->
@@ -115,7 +116,7 @@
 
     </div>
     <script src="{{ asset('js/jquery.js') }}"></script>
-    <script src="{{ asset('js/calendar_v1.js') }}"></script>
+    <script src="{{ asset('js/calendar.js') }}"></script>
     <script src="{{ asset('js/dashboard_slide_menu.js') }}"></script>
 
 </body>

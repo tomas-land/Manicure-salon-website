@@ -15,7 +15,9 @@ mix.js('resources/js/app.js', 'public/js')
     .vue()
     .sass('resources/sass/app.scss', 'public/css')
     .copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts')
+    
     .copy('node_modules/chart.js/dist/chart.js', 'public/chart.js/chart.js');
+    mix.copy('node_modules/fullcalendar/main.js', 'public/js/calendar/calendar.js');
     if (mix.inProduction()) {
         mix.version();
     }
