@@ -15,7 +15,6 @@
 
     <script src="{{ mix('/js/app.js') }}"></script>
     <script src="{{ mix('/chart.js/chart.js') }}"></script>
-    <script src="{{ mix('/js/calendar/calendar.js') }}"></script>
 
 
     <!-- Styles -->
