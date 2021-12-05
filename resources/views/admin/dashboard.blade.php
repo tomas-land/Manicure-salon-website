@@ -115,7 +115,7 @@
 
     </div>
     <script src="{{ asset('js/jquery.js') }}"></script>
-    <script src="{{ asset('js/calendar.js') }}"></script>
+    <script src="{{ asset('js/calendar.v1.1.js') }}"></script>
     <script src="{{ asset('js/dashboard_slide_menu.js') }}"></script>
 
 </body>
