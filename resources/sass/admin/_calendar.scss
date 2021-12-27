@@ -1,9 +1,13 @@
 #calendar {
     background-color: rgb(237, 206, 255);
 
+    .event-border{
+        border: 2px solid #c376c3!important;
+      }
     .fc-event-container {
         margin: 0;
         border-radius: 0;
+        
     }
 
     .fc-today {
@@ -21,6 +25,13 @@
             background: #8f3d92;
         }
 
+    }
+
+    .fc-slats {
+        td {
+            height: 2em!important; 
+
+        }
     }
 
     td {

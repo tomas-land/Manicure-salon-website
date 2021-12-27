@@ -23,7 +23,10 @@ $(document).ready(function () {
         height: 'auto',
         minTime: '07:00:00',
         maxTime: '23:00:00',
-        // slotDuration: '00:30:00',
+        eventBorderColor:'red',
+        className: 'moreBorder',
+        // agendaEventMinHeight:60,
+        // slotDuration: '00:20:00',
         // slotLabelInterval: 30,
         // slotLabelFormat: 'h(:mm)',
         header: {
@@ -40,6 +43,10 @@ $(document).ready(function () {
             element.find('.fc-content').css("background-color", event.color);
             element.find('.fc-bg').css("background-color", event.color);
             element.find('.fc-time').css("font-weight", "500");
+            element.addClass('event-border');
+            // element.find('.fc-content').css("border", "2px solid #bc8f8f");
+            // element.find('.fc-content').css("border-bottom", "0px solid #bc8f8f");
+            // element.find('.fc-content').css("border", "3px solid red");
             jQuery('.fc-prev-button').attr('class', '');
             jQuery('.fc-next-button').attr('class', '');
             jQuery('.fc-today-button').attr('class', 'fc-today-button');
@@ -85,6 +92,7 @@ $(document).ready(function () {
                         end: end,
                         role: role,
                         color: color,
+                        
                         type: 'add'
 
                     },

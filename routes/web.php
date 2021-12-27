@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\NexmoSMSController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +16,12 @@ use Illuminate\Support\Facades\Route;
  */
 
 Auth::routes();
-// Route::get('send', [NexmoSMSController::class, 'index']);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth'])->group(function () {
 
-    
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
     Route::resource('/admin/clients', App\Http\Controllers\ClientController::class);
     Route::resource('/admin/visits', App\Http\Controllers\VisitController::class);
@@ -31,9 +29,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/calendar/action', [App\Http\Controllers\CalendarController::class, 'action']);
     Route::get('/admin/finance', [App\Http\Controllers\FinanceController::class, 'index'])->name('finance');
     Route::get('/admin/statistics', [App\Http\Controllers\StatisticsController::class, 'index'])->name('statistics');
-
-
-    
 
 });
 
