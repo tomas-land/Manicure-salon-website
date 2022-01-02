@@ -37,25 +37,26 @@
                                 <option class="option-disabled">{{ $service->name }}</option>
                             @endforeach
                         </select>
-                        <input type="text" placeholder="Įveskite kainą" class="input" id="calendar-modal-price"
+                        <input id="calendar-modal-freetime" name="service" type="text" style="display: none" placeholder="Įveskite veiklos pavadinimą">
+                        <input type="text" placeholder=" kainą" class="input" id="calendar-modal-price"
                             name="price" class="form-control" value="">
                         <div class="select-color">
                             <label class="container">
                                 <input type="radio" checked="checked" value="#8f3d92" name="color">
-                                <span class="checkmark" style="background-color: #8f3d92"></span>
-                            </label>
-                            <label class="container">
-                                <input type="radio" value="#8500ff" name="color">
-                                <span class="checkmark" style="background-color: #8500ff"></span>
-                            </label>
-
-                            <label class="container">
-                                <input type="radio" value="#4865cd" name="color">
-                                <span class="checkmark" style="background-color: #4865cd"></span>
+                                <span class="checkmark" style="background-color:#8f3d92"></span>
                             </label>
                             <label class="container">
                                 <input type="radio" value="#d7488d" name="color">
-                                <span class="checkmark" style="background-color: #d7488d"></span>
+                                <span class="checkmark" style="background-color:#d7488d"></span>
+                            </label>
+
+                            <label class="container">
+                                <input type="radio" value="#8500ff" name="color">
+                                <span class="checkmark" style="background-color:#8500ff"></span>
+                            </label>
+                            <label class="container">
+                                <input type="radio" value="#ee69f3" name="color">
+                                <span class="checkmark" style="background-color:#ee69f3"></span>
                             </label>
                         </div>
                         @if (Auth::user() && Auth::user()->role == 'admin')

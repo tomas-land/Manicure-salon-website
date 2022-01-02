@@ -23,7 +23,7 @@ $(document).ready(function () {
         height: 'auto',
         minTime: '07:00:00',
         maxTime: '23:00:00',
-        eventBorderColor:'red',
+        eventBorderColor: 'red',
         className: 'moreBorder',
         // agendaEventMinHeight:60,
         // slotDuration: '00:20:00',
@@ -64,20 +64,37 @@ $(document).ready(function () {
             var end = $.fullCalendar.formatDate(end, 'Y-MM-DD HH:mm:ss');
             $('#calendar-modal-start').val(start);
             $('#calendar-modal-end').val(end);
+            $('#calendar-modal-id').change(function () {
+                if ($('#calendar-modal-id option:selected').text() == 'Tomas Landasinskas') {
+                    $('#calendar-modal-select').css('display', 'none');
+                    $('#calendar-modal-price').css('display', 'none');
+                    $('#calendar-modal-freetime').css('display', 'block');
+                }
+
+            });
+
             $('#myform').submit(function (e) {
 
                 var client_id = $('#calendar-modal-id').val();
                 var name = $('#calendar-modal-id option:selected').text();
                 // var surname = $('#calendar-modal-surname').val();
-                var service = $('#calendar-modal-select').val();
+                if ($('#calendar-modal-select').val() == null) {
+                    var service = $('#calendar-modal-freetime').val();
+
+                } else {
+                    var service = $('#calendar-modal-select').val();
+                }
                 var price = $('#calendar-modal-price').val();
                 var start = $('#calendar-modal-start').val();
                 var end = $('#calendar-modal-end').val();
                 var role = $('#calendar-modal-role').val();
-                
+
                 if ($("input[name='color']").is(':checked')) {
                     var color = $('input[name="color"]:checked').val();
                 }
+                $('#calendar-modal-select').css('display', 'block');
+                $('#calendar-modal-price').css('display', 'block');
+                $('#calendar-modal-freetime').css('display', 'none');
 
                 e.preventDefault();
                 $.ajax({
@@ -92,7 +109,7 @@ $(document).ready(function () {
                         end: end,
                         role: role,
                         color: color,
-                        
+
                         type: 'add'
 
                     },

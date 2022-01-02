@@ -9248,6 +9248,15 @@ footer .container .column__contact h4 {
   display: flex;
   flex-wrap: wrap;
 }
+#mymodal .modal-content .modal-body input:focus::-moz-placeholder {
+  color: transparent;
+}
+#mymodal .modal-content .modal-body input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+#mymodal .modal-content .modal-body input:focus::placeholder {
+  color: transparent;
+}
 #mymodal .modal-content .modal-body input {
   margin-bottom: 1rem;
   width: 100%;

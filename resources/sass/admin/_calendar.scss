@@ -1,13 +1,14 @@
 #calendar {
     background-color: rgb(237, 206, 255);
 
-    .event-border{
-        border: 2px solid #c376c3!important;
-      }
+    .event-border {
+        border: 2px solid #c376c3 !important;
+    }
+
     .fc-event-container {
         margin: 0;
         border-radius: 0;
-        
+
     }
 
     .fc-today {
@@ -29,7 +30,7 @@
 
     .fc-slats {
         td {
-            height: 2em!important; 
+            height: 2em !important;
 
         }
     }
@@ -116,6 +117,11 @@
         .modal-body {
             display: flex;
             flex-wrap: wrap;
+
+            //on focus input placeholder dissapears
+            input:focus::placeholder {
+                color: transparent;
+            }
 
             input {
                 margin-bottom: 1rem;
