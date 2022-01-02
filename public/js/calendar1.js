@@ -69,8 +69,12 @@ $(document).ready(function () {
                     $('#calendar-modal-select').css('display', 'none');
                     $('#calendar-modal-price').css('display', 'none');
                     $('#calendar-modal-freetime').css('display', 'block');
+                } else {
+                    $('#calendar-modal-select').css('display', 'block');
+                    $('#calendar-modal-price').css('display', 'block');
+                    $('#calendar-modal-freetime').css('display', 'none');
                 }
-
+            
             });
 
             $('#myform').submit(function (e) {
