@@ -65,7 +65,7 @@ $(document).ready(function () {
             $('#calendar-modal-start').val(start);
             $('#calendar-modal-end').val(end);
             $('#calendar-modal-id').change(function () {
-                if ($('#calendar-modal-id option:selected').text() == 'MANO LAISVALAIKIS') {
+                if ($('#calendar-modal-id option:selected').text() == '_MANO LAISVALAIKIS') {
                     $('#calendar-modal-select').css('display', 'none');
                     $('#calendar-modal-price').css('display', 'none');
                     $('#calendar-modal-freetime').css('display', 'block');
