@@ -38,7 +38,7 @@
                             @endforeach
                         </select>
                         <input id="calendar-modal-freetime" name="service" type="text" style="display: none" placeholder="Įveskite veiklos pavadinimą">
-                        <input type="text" placeholder=" kainą" class="input" id="calendar-modal-price"
+                        <input type="text" placeholder="Įveskite kainą" class="input" id="calendar-modal-price"
                             name="price" class="form-control" value="">
                         <div class="select-color">
                             <label class="container">
