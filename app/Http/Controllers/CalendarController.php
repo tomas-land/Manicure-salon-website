@@ -20,7 +20,7 @@ class CalendarController extends Controller
                     ->get(['id', 'start', 'end', 'service', 'price', 'name', 'client_id','color']);
                 return response()->json($data);
             }
-            $clients = Client::where('created_by', 'admin')->get();
+            $clients = Client::where('created_by', 'admin')->orderBy('name', 'ASC')->get();
         } elseif (Auth::user() && Auth::user()->role == 'guest') {
             if ($request->ajax()) {
                 $data = Visit::where('created_by', 'guest')->whereDate('start', '>=', $request->start)
@@ -28,10 +28,10 @@ class CalendarController extends Controller
                     ->get(['id', 'start', 'end', 'service', 'price', 'name', 'client_id','color']);
                 return response()->json($data);
             }
-            $clients = Client::where('created_by', 'guest')->get();
+            $clients = Client::where('created_by', 'guest')->orderBy('name', 'ASC')->get();
         }
 
-        $sub_services = SubService::all();
+        $sub_services = SubService::orderBy('name', 'ASC')->get();
         return view('admin.calendar.index', compact('sub_services', 'clients'));
     }
 
