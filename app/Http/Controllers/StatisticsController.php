@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Visit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class StatisticsController extends Controller
 {
@@ -60,28 +61,17 @@ class StatisticsController extends Controller
         //     ->whereDate('start', '<=', Carbon::now())
         //     ->get();
         //------------------------------------------------------------------------------------------------------------------
-        $visitsOfcurrentMonth = Visit::whereBetween('start', [$beginingOfCurrentMonth, $now])
-            ->pluck('price', 'start');
-        $assignedPrices = assignPricesToDate($visitsOfcurrentMonth);
-        $summedUpPrices = sumPricesAssignToDate($assignedPrices);
-        $currentMonthTotal = countTotal($summedUpPrices);
+  
+        if (Auth::user() && Auth::user()->role == 'admin') {
 
-        $visitsOfMonthBefore = Visit::whereBetween('start', [$monthBeforeBegining, $monthBeforeEnding])
-            ->pluck('price', 'start');
-        $assignedPrices2 = assignPricesToDate($visitsOfMonthBefore);
-        $summedUpPrices2 = sumPricesAssignToDate($assignedPrices2);
-        $monthBeforeTotal = countTotal($summedUpPrices2);
-
-        $visitsOfTwoMonthsBefore = Visit::whereBetween('start', [$twoMonthsBeforeBegining, $twoMonthsBeforeEnding])
-            ->pluck('price', 'start');
-        $assignedPrices3 = assignPricesToDate($visitsOfTwoMonthsBefore);
-        $summedUpPrices3 = sumPricesAssignToDate($assignedPrices3);
-        $twoMonthsBeforeTotal = countTotal($summedUpPrices3);
-
-        Carbon::setLocale('LT'); // change language for carbon dates
-
-        $services = Visit::whereBetween('start', [$beginingOfCurrentMonth, $endingOfCurrentMonth])
+            $services = Visit::where('created_by', 'admin')->whereBetween('start', [$beginingOfCurrentMonth, $endingOfCurrentMonth])
             ->pluck('service', 'id');
+        } else {
+            $services = Visit::where('created_by', 'guest')->whereBetween('start', [$beginingOfCurrentMonth, $endingOfCurrentMonth])
+            ->pluck('service', 'id');
+
+        }
+    
 
         $array = [];
         foreach ($services as $id => $service) {

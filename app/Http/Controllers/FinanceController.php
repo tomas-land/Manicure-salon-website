@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Visit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class FinanceController extends Controller
 {
@@ -61,27 +62,48 @@ class FinanceController extends Controller
         //     ->whereDate('start', '<=', Carbon::now())
         //     ->get();
         //------------------------------------------------------------------------------------------------------------------
-        $visitsOfcurrentMonth = Visit::whereBetween('start', [$beginingOfCurrentMonth, $now])
-            ->pluck('price', 'start');
-        $assignedPrices = assignPricesToDate($visitsOfcurrentMonth);
-        $summedUpPrices = sumPricesAssignToDate($assignedPrices);
-        $currentMonthTotal = countTotal($summedUpPrices);
 
-        $visitsOfMonthBefore = Visit::whereBetween('start', [$monthBeforeBegining, $monthBeforeEnding])
-            ->pluck('price', 'start');
-        $assignedPrices2 = assignPricesToDate($visitsOfMonthBefore);
-        $summedUpPrices2 = sumPricesAssignToDate($assignedPrices2);
-        $monthBeforeTotal = countTotal($summedUpPrices2);
+   
+        if (Auth::user() && Auth::user()->role == 'admin') {
+            $visitsOfcurrentMonth = Visit::where('created_by', 'admin')->whereBetween('start', [$beginingOfCurrentMonth, $now])
+                ->pluck('price', 'start');
+            $assignedPrices = assignPricesToDate($visitsOfcurrentMonth);
+            $summedUpPrices = sumPricesAssignToDate($assignedPrices);
+            $currentMonthTotal = countTotal($summedUpPrices);
 
-        $visitsOfTwoMonthsBefore = Visit::whereBetween('start', [$twoMonthsBeforeBegining, $twoMonthsBeforeEnding])
-            ->pluck('price', 'start');
-        $assignedPrices3 = assignPricesToDate($visitsOfTwoMonthsBefore);
-        $summedUpPrices3 = sumPricesAssignToDate($assignedPrices3);
-        $twoMonthsBeforeTotal = countTotal($summedUpPrices3);
+            $visitsOfMonthBefore = Visit::where('created_by', 'admin')->whereBetween('start', [$monthBeforeBegining, $monthBeforeEnding])
+                ->pluck('price', 'start');
+            $assignedPrices2 = assignPricesToDate($visitsOfMonthBefore);
+            $summedUpPrices2 = sumPricesAssignToDate($assignedPrices2);
+            $monthBeforeTotal = countTotal($summedUpPrices2);
 
+            $visitsOfTwoMonthsBefore = Visit::where('created_by', 'admin')->whereBetween('start', [$twoMonthsBeforeBegining, $twoMonthsBeforeEnding])
+                ->pluck('price', 'start');
+            $assignedPrices3 = assignPricesToDate($visitsOfTwoMonthsBefore);
+            $summedUpPrices3 = sumPricesAssignToDate($assignedPrices3);
+            $twoMonthsBeforeTotal = countTotal($summedUpPrices3);
+        } else {
+            $visitsOfcurrentMonth = Visit::where('created_by', 'guest')->whereBetween('start', [$beginingOfCurrentMonth, $now])
+                ->pluck('price', 'start');
+            $assignedPrices = assignPricesToDate($visitsOfcurrentMonth);
+            $summedUpPrices = sumPricesAssignToDate($assignedPrices);
+            $currentMonthTotal = countTotal($summedUpPrices);
+
+            $visitsOfMonthBefore = Visit::where('created_by', 'guest')->whereBetween('start', [$monthBeforeBegining, $monthBeforeEnding])
+                ->pluck('price', 'start');
+            $assignedPrices2 = assignPricesToDate($visitsOfMonthBefore);
+            $summedUpPrices2 = sumPricesAssignToDate($assignedPrices2);
+            $monthBeforeTotal = countTotal($summedUpPrices2);
+
+            $visitsOfTwoMonthsBefore = Visit::where('created_by', 'guest')->whereBetween('start', [$twoMonthsBeforeBegining, $twoMonthsBeforeEnding])
+                ->pluck('price', 'start');
+            $assignedPrices3 = assignPricesToDate($visitsOfTwoMonthsBefore);
+            $summedUpPrices3 = sumPricesAssignToDate($assignedPrices3);
+            $twoMonthsBeforeTotal = countTotal($summedUpPrices3);
+        }
         Carbon::setLocale('LT'); // change language for carbon dates
         return view('admin.finance.index', compact('summedUpPrices', 'currentMonthTotal', 'monthBeforeTotal', 'twoMonthsBeforeTotal'));
-        
+
         //  Laravel Charts -----------------------------------------------------------------------------------------------------------
         // $chart = new MonthlyIncomeChart;
         // $chart->labels(array_keys($array2));
