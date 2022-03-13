@@ -49,7 +49,6 @@
                                 <input type="radio" value="#d7488d" name="color">
                                 <span class="checkmark" style="background-color:#d7488d"></span>
                             </label>
-
                             <label class="container">
                                 <input type="radio" value="#8500ff" name="color">
                                 <span class="checkmark" style="background-color:#8500ff"></span>
