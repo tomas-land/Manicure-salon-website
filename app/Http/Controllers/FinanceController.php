@@ -6,6 +6,7 @@ use App\Models\Visit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class FinanceController extends Controller
 {
@@ -16,7 +17,7 @@ class FinanceController extends Controller
      */
     public function index(Request $request)
     {
-
+  
         function assignPricesToDate($visits)
         {
             $array = [];
@@ -63,7 +64,6 @@ class FinanceController extends Controller
         //     ->get();
         //------------------------------------------------------------------------------------------------------------------
 
-   
         if (Auth::user() && Auth::user()->role == 'admin') {
             $visitsOfcurrentMonth = Visit::where('created_by', 'admin')->whereBetween('start', [$beginingOfCurrentMonth, $now])
                 ->pluck('price', 'start');

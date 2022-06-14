@@ -34,3 +34,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::resource('paslaugos', App\Http\Controllers\ServiceController::class);
 Route::resource('galerija', App\Http\Controllers\GalleryController::class);
+
+// curl -u "50ffa6fe:pYarAQx6YzJSmBoW" \
+//      "https://api.nexmo.com/v2/reports/records?account_id=abcd1234&product=MESSAGES&direction=outbound&date_start=2022-06-01T00:01:00Z"
+//      https://api.nexmo.com/v2/reports/records?api_key=50ffa6fe&api_secret=pYarAQx6YzJSmBoW

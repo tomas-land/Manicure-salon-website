@@ -1,6 +1,5 @@
 @extends('admin.dashboard')
 @section('admin-content')
-
     <div id="finance">
         {{-- {!! $chart->container() !!}
             {!! $chart->script() !!} --}}

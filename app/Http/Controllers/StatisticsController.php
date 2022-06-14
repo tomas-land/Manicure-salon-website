@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Visit;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+
+// use \Psr\Http\Message\ServerRequestInterface as Request;
+// use \Psr\Http\Message\ResponseInterface as Response;
 
 class StatisticsController extends Controller
 {
@@ -16,7 +20,7 @@ class StatisticsController extends Controller
      */
     public function index()
     {
-        
+
         function assignPricesToDate($visits)
         {
             $array = [];
@@ -62,17 +66,16 @@ class StatisticsController extends Controller
         //     ->whereDate('start', '<=', Carbon::now())
         //     ->get();
         //------------------------------------------------------------------------------------------------------------------
-  
+
         if (Auth::user() && Auth::user()->role == 'admin') {
 
             $services = Visit::where('created_by', 'admin')->whereBetween('start', [$beginingOfCurrentMonth, $endingOfCurrentMonth])
-            ->pluck('service', 'id');
+                ->pluck('service', 'id');
         } else {
             $services = Visit::where('created_by', 'guest')->whereBetween('start', [$beginingOfCurrentMonth, $endingOfCurrentMonth])
-            ->pluck('service', 'id');
+                ->pluck('service', 'id');
 
         }
-    
 
         $array = [];
         foreach ($services as $id => $service) {
