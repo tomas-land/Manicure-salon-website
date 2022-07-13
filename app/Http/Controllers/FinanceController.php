@@ -17,7 +17,6 @@ class FinanceController extends Controller
      */
     public function index(Request $request)
     {
-  
         function assignPricesToDate($visits)
         {
             $array = [];

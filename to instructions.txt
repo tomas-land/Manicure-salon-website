@@ -13,6 +13,7 @@ setup:
 4.2 in hosting server cpanel/cron jobs custom field : /bin/sh /home/u430768004/domains/vb-studija.lt/vb-studija/script.sh
 4.3 set time
 4.4 save
+5. to run scheduler on local server : php artisan:work
 
 // PAGINATION
 0.create in views pagination.blade.php

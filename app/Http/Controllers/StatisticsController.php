@@ -20,7 +20,6 @@ class StatisticsController extends Controller
      */
     public function index()
     {
-
         function assignPricesToDate($visits)
         {
             $array = [];

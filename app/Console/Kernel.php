@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('send:SMS')->dailyAt('11:00')->timezone('Europe/Vilnius');
+        $schedule->command('send:SMS')->dailyAt('10:00')->timezone('Europe/Vilnius');
 //----------------------------------------------------------------
         // $schedule->command('send:SMS')->when(function (){
         //      Carbon::now();
