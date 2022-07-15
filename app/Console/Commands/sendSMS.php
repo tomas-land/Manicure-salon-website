@@ -41,7 +41,7 @@ class sendSMS extends Command
     public function handle()
     {
         $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->where('name', '!=' , '_MANO LAISVALAIKIS')->get();
-dd('dwd');
+
         foreach ($visits as $visit) {
             $visitTimeByPhone[$visit->client->phone][] = Carbon::parse($visit->start)->format("H:i");
         }
