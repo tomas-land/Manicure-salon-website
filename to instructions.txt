@@ -50,3 +50,7 @@ in controller : $monthlyIncomeChart = new MonthlyIncomeChart;
 
 // Js not changing
 if not changing js in webbrowser clear browser cache : ctrl+f5
+
+// Mysql dump 
+$ composer require ifsnop/mysqldump-php
+https://github.com/ifsnop/mysqldump-php/blob/master/README.md
