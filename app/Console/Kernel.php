@@ -26,6 +26,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('send:SMS')->dailyAt('10:00')->timezone('Europe/Vilnius');
         $schedule->command('dump:database')->dailyAt('10:10')->timezone('Europe/Vilnius');
+        
 //----------------------------------------------------------------
         // $schedule->command('send:SMS')->when(function (){
         //      Carbon::now();
