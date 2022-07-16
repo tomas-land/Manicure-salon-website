@@ -7,6 +7,7 @@ use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Ifsnop\Mysqldump as IMysqldump;
 
 // use \Psr\Http\Message\ServerRequestInterface as Request;
 // use \Psr\Http\Message\ResponseInterface as Response;
@@ -20,6 +21,7 @@ class StatisticsController extends Controller
      */
     public function index()
     {
+        
         function assignPricesToDate($visits)
         {
             $array = [];

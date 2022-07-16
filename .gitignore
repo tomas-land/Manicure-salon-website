@@ -15,3 +15,5 @@ to ssh
 /.idea
 /.vscode
 to_ssh.txt
+.DS_Store
+**/.DS_Store
