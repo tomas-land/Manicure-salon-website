@@ -48,7 +48,8 @@ class sendSMS extends Command
 
         foreach ($visitTimeByPhone as $phone => $time) {
 
-         
+            $uid = getenv('UID_SMSBIURAS');
+            $apikey = getenv('API_KEY_SMSBIURAS');
             $to = $phone; // Gavėjo numeris
             $from = "VB-studija"; // Patvirtintas siuntėjo pavadinimas
             $message = urlencode("Sveiki, primename, kad rytoj " . implode(' ir ', $time) . " val. laukiame Jūsų, Virmantės Bašinskienės manikiūro studijoje. Iki malonaus susitikimo! "); // Žinutės tekstas
