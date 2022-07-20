@@ -52,7 +52,7 @@ class sendSMS extends Command
             $apikey = getenv('API_KEY_SMSBIURAS');
             $to = $phone; // Gavėjo numeris
             $from = "VB-studija"; // Patvirtintas siuntėjo pavadinimas
-            $message = urlencode("Sveiki,s susitikimo! "); // Žinutės tekstas
+            $message = urlencode("Sveiki, primename, kad rytoj " . implode(' ir ', $time) . " val. laukiame Jūsų, Virmantės Bašinskienės manikiūro studijoje. Iki malonaus susitikimo! "); // Žinutės tekstas
             $test = 0; // 0 - siunčiama reali SMS, 1 - reali SMS nesiunčiama
 
             $curl = curl_init();
