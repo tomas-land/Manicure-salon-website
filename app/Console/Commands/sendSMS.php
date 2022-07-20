@@ -40,17 +40,17 @@ class sendSMS extends Command
      */
     public function handle()
     {
-        // $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->where('name', '!=' , '_MANO LAISVALAIKIS')->get();
+        $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->where('name', '!=' , '_MANO LAISVALAIKIS')->get();
 
-        // foreach ($visits as $visit) {
-        //     $visitTimeByPhone[$visit->client->phone][] = Carbon::parse($visit->start)->format("H:i");
-        // }
+        foreach ($visits as $visit) {
+            $visitTimeByPhone[$visit->client->phone][] = Carbon::parse($visit->start)->format("H:i");
+        }
 
-        // foreach ($visitTimeByPhone as $phone => $time) {
+        foreach ($visitTimeByPhone as $phone => $time) {
 
-            $uid = "2874";
-            $apikey = "KzM3MDY3NTMyODY1Ojg3NzNBNTM2N0JENjg0Kw==";
-            $to = '37067532865';// Gavėjo numeris
+            $uid = getenv('UID_SMSBIURAS');
+            $apikey = getenv('API_KEY_SMSBIURAS');
+            $to = $phone; // Gavėjo numeris
             $from = "VB-studija"; // Patvirtintas siuntėjo pavadinimas
             $message = urlencode("Sveiki,s susitikimo! "); // Žinutės tekstas
             $test = 0; // 0 - siunčiama reali SMS, 1 - reali SMS nesiunčiama
@@ -76,7 +76,7 @@ class sendSMS extends Command
             curl_close($curl);
             echo $response;
 
-        // }
+        }
         // $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->get();
 
         // foreach ($visits as $visit) {
