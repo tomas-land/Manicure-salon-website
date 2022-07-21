@@ -40,7 +40,7 @@ class sendSMS extends Command
      */
     public function handle()
     {
-        $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->where('name', '!=' , '_MANO LAISVALAIKIS')->get();
+        $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->where('name', '!=', '_MANO LAISVALAIKIS')->get();
 
         foreach ($visits as $visit) {
             $visitTimeByPhone[$visit->client->phone][] = Carbon::parse($visit->start)->format("H:i");
@@ -154,23 +154,20 @@ class sendSMS extends Command
         //     }
         // }
 
-            // $dates = Visit::where('created_by','admin')->whereDate('start', Carbon::tomorrow())->get();
-            // foreach ($dates as $date) {
-            //     $hours = $date->start;
-            //     $dt = Carbon::createFromFormat("Y-m-d H:i:s", $hours);
-            //     $time = $dt->format('H:i'); 
-            //     $sms_text = "Sveiki, primename, kad rytoj, {$time} , laukiame Jūsų Virmantės Bašinskienės manikiūro studijoje. Iki malonaus susitikimo! ";
+        // $dates = Visit::where('created_by','admin')->whereDate('start', Carbon::tomorrow())->get();
+        // foreach ($dates as $date) {
+        //     $hours = $date->start;
+        //     $dt = Carbon::createFromFormat("Y-m-d H:i:s", $hours);
+        //     $time = $dt->format('H:i');
+        //     $sms_text = "Sveiki, primename, kad rytoj, {$time} , laukiame Jūsų Virmantės Bašinskienės manikiūro studijoje. Iki malonaus susitikimo! ";
 
-            //     $basic = new \Vonage\Client\Credentials\Basic("50ffa6fe", "pYarAQx6YzJSmBoW");
-            //     $client = new \Vonage\Client($basic);
-            //     $client->sms()->send(
-            //         new \Vonage\SMS\Message\SMS($date->client->phone, 'VB-nailart studija', $sms_text)
-            //     );
-            // }         
-
-
-            
-        }
+        //     $basic = new \Vonage\Client\Credentials\Basic("50ffa6fe", "pYarAQx6YzJSmBoW");
+        //     $client = new \Vonage\Client($basic);
+        //     $client->sms()->send(
+        //         new \Vonage\SMS\Message\SMS($date->client->phone, 'VB-nailart studija', $sms_text)
+        //     );
+        // }
 
     }
 
+}
