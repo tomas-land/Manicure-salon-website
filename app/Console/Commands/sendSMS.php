@@ -40,19 +40,19 @@ class sendSMS extends Command
      */
     public function handle()
     {
-        $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->where('name', '!=', '_MANO LAISVALAIKIS')->get();
+        // $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->where('name', '!=', '_MANO LAISVALAIKIS')->get();
 
-        foreach ($visits as $visit) {
-            $visitTimeByPhone[$visit->client->phone][] = Carbon::parse($visit->start)->format("H:i");
-        }
+        // foreach ($visits as $visit) {
+        //     $visitTimeByPhone[$visit->client->phone][] = Carbon::parse($visit->start)->format("H:i");
+        // }
 
-        foreach ($visitTimeByPhone as $phone => $time) {
+        // foreach ($visitTimeByPhone as $phone => $time) {
 
             $uid = getenv('UID_SMSBIURAS');
             $apikey = getenv('API_KEY_SMSBIURAS');
-            $to = $phone; // Gavėjo numeris
+            $to = '37067532865'; // Gavėjo numeris
             $from = "VB-studija"; // Patvirtintas siuntėjo pavadinimas
-            $message = urlencode("Sveiki, primename, kad rytoj " . implode(' ir ', $time) . " val. laukiame Jūsų, Virmantės Bašinskienės manikiūro studijoje. Iki malonaus susitikimo! "); // Žinutės tekstas
+            $message = urlencode("Sveiki, primename, kad rytoj studijoje. Iki malonaus susitikimo! "); // Žinutės tekstas
             $test = 0; // 0 - siunčiama reali SMS, 1 - reali SMS nesiunčiama
 
             $curl = curl_init();
@@ -76,7 +76,7 @@ class sendSMS extends Command
             curl_close($curl);
             echo $response;
 
-        }
+        // }
         // $visits = Visit::where('created_by', 'admin')->whereDate('start', Carbon::tomorrow())->get();
 
         // foreach ($visits as $visit) {
