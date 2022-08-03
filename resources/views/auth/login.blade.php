@@ -28,7 +28,7 @@
                             <div class="form-group row">
                                 <div class="col-md-6">
                                     <input id="password" type="password"
-                                        class="form-control @error('password') is-invalid @enderror" value="admin123" name="password"
+                                        class="form-control @error('password') is-invalid @enderror" value="" name="password"
                                         required autocomplete="current-password">
 
                                     @error('password')
